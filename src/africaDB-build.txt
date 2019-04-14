@@ -1,0 +1,32 @@
+/* Names: Christian Lussier, Robert Samuel, Jordan Wilson /*
+/* A database builder file; edit as necessary */
+/* To Run build the database, make sure that your CSV data files are found in the data/ directory. */
+
+/* How to run this builder: */
+/* cat africaDB-build.txt | sqlite3 africaDB.sqlite3 */
+
+
+/* Create your tables. Modify the below code to create your tables. */
+
+drop table HPI;
+create table HPI (
+        protID VARCHAR NOT NULL PRIMARY KEY,
+        entryName VARCHAR NOT NULL ,
+        Status VARCHAR ,
+        ProteinName VARCHAR ,
+        GeneName VARCHAR ,
+        Organism VARCHAR ,
+        Length numeric
+);
+
+
+/* Import your data files. Use the below code to populate the tables from above. */
+/* If your data is not separated by tabs, then change the following line to reflect the delimiter. */
+.separator ","
+
+/* find the file and load it into sqlite3 which will create the database.*/
+.import data/hpi-data-2016.csv HPI
+
+
+/* How to run this builder: */
+/* cat africaDB-build.txt | sqlite3 africaDB.sqlite3 */
