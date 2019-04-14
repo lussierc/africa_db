@@ -18,7 +18,7 @@ In order to research our subject and answer our questions, we had to find data f
 - [World Bank](https://databank.worldbank.org/data/source/africa-development-indicators#): This type of information contains the GDP (gross Domestic Products) and GDP per Capita (in current $USD) of all of the African countries between 2000 and 2012. This gives us an insight of the type of healthcare these African countries have and their standards of living.
 - [IMF - Real GDP Growth in Africa](https://www.imf.org/external/datamapper/NGDP_RPCH@WEO/OEMDC/ADVEC/WEOWORLD): Contains information about Africa's real GDP growth over the last few decades.
 
-Additionally, we completed research outside the data about Africa and found references that support the motivation of our project. For instance in their article ["Why Has Africa Grown Slowly"](https://www.aeaweb.org/articles?id=10.1257/jep.13.3.3), Collier, Paul, and Gunning discuss Africa's slow growth over since the late twentieth century and discuss some of the issues African economies have faced.
+Additionally, we completed research outside the data about Africa and found references that support the motivation of our project. For instance in their article ["Why Has Africa Grown Slowly"](https://www.aeaweb.org/articles?id=10.1257/jep.13.3.3), Collier, Paul, and Gunning discuss Africa's slow growth over since the late twentieth century and discuss some of the issues African economies have faced, such as a heavy reliance of natural resources. This further validates our argument of the relevance of issues surrounding African development. 
 
 ###### Reference Citations:
 - Collier, Paul, and Jan Willem Gunning. 1999. "Why Has Africa Grown Slowly?" Journal of Economic Perspectives, 13 (3): 3-22.
