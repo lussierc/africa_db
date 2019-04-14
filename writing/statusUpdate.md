@@ -6,7 +6,7 @@
 ##### Project Subject
 
 ##### Main Questions to Address
-1)
+1) Africa's Real GDP Growth rate seemed to steadily increase for a few decades, but then it took a downturn. When did this downturn occur and why?
 2)
 3)
 4)
@@ -14,8 +14,9 @@
 ##### Data Citations and References
 In order to research our subject and answer our questions, we had to find data from a number of sources:
 - [Happy Planet Index](http://happyplanetindex.org): Contains information about how happy citizens are living in their respective countries. Also provides valuable insights into life expectancy, wellness, and more in Africa.
+- [IMF - Real GDP Growth in Africa](https://www.imf.org/external/datamapper/NGDP_RPCH@WEO/OEMDC/ADVEC/WEOWORLD): Contains information about Africa's real GDP growth over the last few decades.
 
-Additionally, we completed research outside the data about Africa and found references that support the motivation of our project,
+Additionally, we completed research outside the data about Africa and found references that support the motivation of our project.
 ##### Steps Already Taken
 
 ##### Steps Left to Complete
