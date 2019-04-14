@@ -26,17 +26,13 @@ In order to research our subject and answer our questions, we had to find data f
 - [Happy Planet Index](http://happyplanetindex.org): Contains information about how happy citizens are living in their respective countries. Also provides valuable insights into life expectancy, wellness, and more in Africa.
 - [World Bank](https://databank.worldbank.org/data/source/africa-development-indicators#): This type of information contains the GDP (gross Domestic Products) and GDP per Capita (in current $USD) of all of the African countries between 2000 and 2012. This gives us an insight of the type of healthcare these African countries have and their standards of living.
 - [IMF - Real GDP Growth in Africa](https://www.imf.org/external/datamapper/NGDP_RPCH@WEO/OEMDC/ADVEC/WEOWORLD): Contains information about Africa's real GDP growth over the last few decades.
-<<<<<<< HEAD
-- [American Economic Association](https://www.aeaweb.org/articles?id=10.1257/jep.13.3.3): Collier, Paul, and Jan Willem Gunning. 1999. "Why Has Africa Grown Slowly?" Journal of Economic Perspectives, 13 (3): 3-22. : This source discusses some of the issues Africa's economy had faced since the late twentieth century.
-- [Wiley Online Library](https://onlinelibrary.wiley.com/doi/epdf/10.1111/roiw.12013) : Devarajan, S. (2013), Africa's Statistical Tragedy. Review of Income and Wealth, 59: S9-S15. doi:10.1111/roiw.12013 : This reference talks about the contemporary statistical foundations of the recent growth in per‐capita GDP and reduction in poverty, which were found to be quite weak in reality.
-=======
 - [Natural Resource Rents (% of GDP)](https://data.worldbank.org/indicator/ny.gdp.totl.rt.zs): Contains data from the last several decades about what percentage of a country's GDP are from natural resources.
 
-Additionally, we completed research outside the data about Africa and found references that support the motivation of our project. For instance in their article ["Why Has Africa Grown Slowly"](https://www.aeaweb.org/articles?id=10.1257/jep.13.3.3), Collier, Paul, and Gunning discuss Africa's slow growth over since the late twentieth century and discuss some of the issues African economies have faced, such as a heavy reliance of natural resources. This further validates our argument of the relevance of issues surrounding African development.
+Additionally, we completed research outside the data about Africa and found references that support the motivation of our project. For instance in their article ["Why Has Africa Grown Slowly"](https://www.aeaweb.org/articles?id=10.1257/jep.13.3.3), Collier, Paul, and Gunning discuss Africa's slow growth over since the late twentieth century and discuss some of the issues African economies have faced, such as a heavy reliance of natural resources. This further validates our argument of the relevance of issues surrounding African development. Additionally, another [reference from the Wiley Online Library](https://onlinelibrary.wiley.com/doi/epdf/10.1111/roiw.12013) talks about the contemporary statistical foundations of the recent growth in per‐capita GDP and reduction in poverty, which were found to be quite weak in reality.
 
 ###### Reference Citations:
 - Collier, Paul, and Jan Willem Gunning. 1999. "Why Has Africa Grown Slowly?" Journal of Economic Perspectives, 13 (3): 3-22.
->>>>>>> 278c37a18d18d010fcc3bc164b575b42bf537b6d
+- Devarajan, S. (2013), Africa's Statistical Tragedy. Review of Income and Wealth, 59: S9-S15. doi:10.1111/roiw.12013
 
 ##### Steps Already Taken
 We have completed a variety of tasks since beginning this project. They are detailed in the list below:
