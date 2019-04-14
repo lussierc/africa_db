@@ -9,7 +9,7 @@
 1) Africa's Real GDP Growth rate seemed to steadily increase for a few decades, but then it took a downturn. When did this downturn occur and why?
 2) Do countries with higher GDP growth/GDP per capita have higher Happy Planet Indexes (representing citizen happiness)?
 3) Is there a correlation between living standards and GDP per capita?
-4)
+4) Are countries that live in a specific region overall happier than countries that don't live in that region? (i.e. Sub-Saharan Africa and MENA)
 5)
 
 ##### Data Citations and References
