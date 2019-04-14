@@ -11,15 +11,10 @@
 2) Do countries with higher GDP growth/GDP per capita have higher Happy Planet Indexes (representing citizen happiness)?
 
 3) Is there a correlation between living standards and GDP per capita?
-<<<<<<< HEAD
-4)
-5)
-=======
 
 4) Are countries that live in a specific region overall happier than countries that don't live in that region? (i.e. Sub-Saharan Africa and MENA)
 
 5) Do countries with a higher natural resources rent (as a % of GDP) have a higher GDP per capita or vice versa? Do the findings from this question make steps to validate the idea of the resource curse?
->>>>>>> 278c37a18d18d010fcc3bc164b575b42bf537b6d
 
 ##### Data Citations and References
 In order to research our subject and answer our questions, we had to find data from a number of sources and articles:
