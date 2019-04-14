@@ -7,10 +7,11 @@
 
 ##### Main Questions to Address
 1) Africa's Real GDP Growth rate seemed to steadily increase for a few decades, but then it took a downturn. When did this downturn occur and why?
-2)
+2) Do countries with higher GDP growth/GDP per capita have higher Happy Planet Indexes (representing citizen happiness)?
 3)
 4)
 5)
+
 ##### Data Citations and References
 In order to research our subject and answer our questions, we had to find data from a number of sources:
 - [Happy Planet Index](http://happyplanetindex.org): Contains information about how happy citizens are living in their respective countries. Also provides valuable insights into life expectancy, wellness, and more in Africa.
@@ -19,8 +20,20 @@ In order to research our subject and answer our questions, we had to find data f
 
 Additionally, we completed research outside the data about Africa and found references that support the motivation of our project,
 ##### Steps Already Taken
+We have completed a variety of tasks since beginning this project. They are detailed in the list below:
+- Came up with project subject.
+- Did background research into our subject
+- Found 4 datasets.
+- Began to import datasets into and write code for our SQLite3 database.
+- Came up with questions & wrote the Status Update.
 
 ##### Steps Left to Complete
+Though we have completed a variety of tasks since beginning this project, we still have a variety of tasks left to complete. They are detailed in the list below:
+- Consider finding more datasets.
+- Consider narrowing down questions.
+- Add all datasets into the SQLite3 database.
+- Write queries and complete research to answer questions.
+- Presentation and Report.
 
 ##### Assigned Group Member Tasks
 
