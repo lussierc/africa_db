@@ -7,21 +7,27 @@
 
 ##### Main Questions to Address
 1) Africa's Real GDP Growth rate seemed to steadily increase for a few decades, but then it took a downturn. When did this downturn occur and why?
+
 2) Do countries with higher GDP growth/GDP per capita have higher Happy Planet Indexes (representing citizen happiness)?
+
 3) Is there a correlation between living standards and GDP per capita?
+
 4) Are countries that live in a specific region overall happier than countries that don't live in that region? (i.e. Sub-Saharan Africa and MENA)
-5)
+
+5) Do countries with a higher natural resources rent (as a % of GDP) have a higher GDP per capita or vice versa? Do the findings from this question make steps to validate the idea of the resource curse?
 
 ##### Data Citations and References
 In order to research our subject and answer our questions, we had to find data from a number of sources and articles:
 - [Happy Planet Index](http://happyplanetindex.org): Contains information about how happy citizens are living in their respective countries. Also provides valuable insights into life expectancy, wellness, and more in Africa.
 - [World Bank](https://databank.worldbank.org/data/source/africa-development-indicators#): This type of information contains the GDP (gross Domestic Products) and GDP per Capita (in current $USD) of all of the African countries between 2000 and 2012. This gives us an insight of the type of healthcare these African countries have and their standards of living.
 - [IMF - Real GDP Growth in Africa](https://www.imf.org/external/datamapper/NGDP_RPCH@WEO/OEMDC/ADVEC/WEOWORLD): Contains information about Africa's real GDP growth over the last few decades.
+- [Natural Resource Rents (% of GDP)](https://data.worldbank.org/indicator/ny.gdp.totl.rt.zs): Contains data from the last several decades about what percentage of a country's GDP are from natural resources.
 
-Additionally, we completed research outside the data about Africa and found references that support the motivation of our project. For instance in their article ["Why Has Africa Grown Slowly"](https://www.aeaweb.org/articles?id=10.1257/jep.13.3.3), Collier, Paul, and Gunning discuss Africa's slow growth over since the late twentieth century and discuss some of the issues African economies have faced, such as a heavy reliance of natural resources. This further validates our argument of the relevance of issues surrounding African development. 
+Additionally, we completed research outside the data about Africa and found references that support the motivation of our project. For instance in their article ["Why Has Africa Grown Slowly"](https://www.aeaweb.org/articles?id=10.1257/jep.13.3.3), Collier, Paul, and Gunning discuss Africa's slow growth over since the late twentieth century and discuss some of the issues African economies have faced, such as a heavy reliance of natural resources. This further validates our argument of the relevance of issues surrounding African development.
 
 ###### Reference Citations:
 - Collier, Paul, and Jan Willem Gunning. 1999. "Why Has Africa Grown Slowly?" Journal of Economic Perspectives, 13 (3): 3-22.
+
 ##### Steps Already Taken
 We have completed a variety of tasks since beginning this project. They are detailed in the list below:
 - Came up with project subject.
