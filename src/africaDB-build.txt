@@ -10,13 +10,14 @@
 
 drop table HPI;
 create table HPI (
-        protID VARCHAR NOT NULL PRIMARY KEY,
-        entryName VARCHAR NOT NULL ,
-        Status VARCHAR ,
-        ProteinName VARCHAR ,
-        GeneName VARCHAR ,
-        Organism VARCHAR ,
-        Length numeric
+        Rank numeric,
+        Country VARCHAR NOT NULL ,
+        Region VARCHAR NOT NULL,
+        Life Expectancy VARCHAR ,
+        Wellbeing VARCHAR ,
+        Inequality VARCHAR ,
+        Ecological VARCHAR,
+        HPI VARCHAR
 );
 
 
