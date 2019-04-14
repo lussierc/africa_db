@@ -9,7 +9,7 @@
 1) Africa's Real GDP Growth rate seemed to steadily increase for a few decades, but then it took a downturn. When did this downturn occur and why?
 2) Do countries with higher GDP growth/GDP per capita have higher Happy Planet Indexes (representing citizen happiness)?
 3) Is there a correlation between living standards and GDP per capita?
-4) Are countries that live in a specific region overall happier than countries that don't live in that region? (i.e. Sub-Saharan Africa and MENA)
+4)
 5)
 
 ##### Data Citations and References
@@ -18,6 +18,7 @@ In order to research our subject and answer our questions, we had to find data f
 - [World Bank](https://databank.worldbank.org/data/source/africa-development-indicators#): This type of information contains the GDP (gross Domestic Products) and GDP per Capita (in current $USD) of all of the African countries between 2000 and 2012. This gives us an insight of the type of healthcare these African countries have and their standards of living.
 - [IMF - Real GDP Growth in Africa](https://www.imf.org/external/datamapper/NGDP_RPCH@WEO/OEMDC/ADVEC/WEOWORLD): Contains information about Africa's real GDP growth over the last few decades.
 - [American Economic Association](https://www.aeaweb.org/articles?id=10.1257/jep.13.3.3): Collier, Paul, and Jan Willem Gunning. 1999. "Why Has Africa Grown Slowly?" Journal of Economic Perspectives, 13 (3): 3-22. : This source discusses some of the issues Africa's economy had faced since the late twentieth century.
+- [Wiley Online Library](https://onlinelibrary.wiley.com/doi/epdf/10.1111/roiw.12013) : Devarajan, S. (2013), Africa's Statistical Tragedy. Review of Income and Wealth, 59: S9-S15. doi:10.1111/roiw.12013 : This reference talks about the contemporary statistical foundations of the recent growth in per‐capita GDP and reduction in poverty, which were found to be quite weak in reality.
 
 Additionally, we completed research outside the data about Africa and found references that support the motivation of our project,
 ##### Steps Already Taken
