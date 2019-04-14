@@ -16,6 +16,9 @@ In order to research our subject and answer our questions, we had to find data f
 - [Happy Planet Index](http://happyplanetindex.org): Contains information about how happy citizens are living in their respective countries. Also provides valuable insights into life expectancy, wellness, and more in Africa.
 
 Additionally, we completed research outside the data about Africa and found references that support the motivation of our project,
+
+Another website we used to research data on the African economy was:
+[World Bank](https://databank.worldbank.org/data/source/africa-development-indicators#): This type of information contains the GDP (gross Domestic Products) and GDP per Capita (in current $USD) of all of the African countries between 2000 and 2012. This gives us an insight of the type of healthcare these African countries have and their standards of living.
 ##### Steps Already Taken
 
 ##### Steps Left to Complete
