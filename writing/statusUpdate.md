@@ -4,6 +4,11 @@
 #### Progress Report
 
 ##### Project Subject
+Our project subject is to use database systems to research African Development and Economics. We intend to look into a number of questions about Africa, it's development, and its current situations. More specifically, we will look for things in our data that may be negatively effecting the development and economics of African countries.
+
+Despite gaining independence in the mid-1900s and receiving financial aid, loans, and more, African countries have faced great problems in their development and in developing their economies to compete on a world scale. With this, this project has some real world relevance because economists and development experts are trying to solve this development problem everyday.
+
+We feel that trying to answer the questions below could provide some valuable insights into what is stopping African economic development. Additionally, these questions could find correlations between different ideas to see if they have any impact on another.
 
 ##### Main Questions to Address
 1) Africa's Real GDP Growth rate seemed to steadily increase for a few decades, but then it took a downturn. When did this downturn occur and why?
