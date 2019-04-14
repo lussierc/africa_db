@@ -36,7 +36,11 @@ Though we have completed a variety of tasks since beginning this project, we sti
 - Presentation and Report.
 
 ##### Assigned Group Member Tasks
+In order to ensure that work is spread out properly between group members, we have assigned each group member tasks. Despite this, we will still try to work as a team, with each group member taking the lead on their assigned task and others supporting as necessary.
 
+###### Christian
+###### Robert
+###### Jordan
 
 
 ###### Please add screen shots in your progress report as relevant. The code to add graphics is the following:
