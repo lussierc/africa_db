@@ -17,15 +17,18 @@ In order to research our subject and answer our questions, we had to find data f
 - [Happy Planet Index](http://happyplanetindex.org): Contains information about how happy citizens are living in their respective countries. Also provides valuable insights into life expectancy, wellness, and more in Africa.
 - [World Bank](https://databank.worldbank.org/data/source/africa-development-indicators#): This type of information contains the GDP (gross Domestic Products) and GDP per Capita (in current $USD) of all of the African countries between 2000 and 2012. This gives us an insight of the type of healthcare these African countries have and their standards of living.
 - [IMF - Real GDP Growth in Africa](https://www.imf.org/external/datamapper/NGDP_RPCH@WEO/OEMDC/ADVEC/WEOWORLD): Contains information about Africa's real GDP growth over the last few decades.
-- [American Economic Association](https://www.aeaweb.org/articles?id=10.1257/jep.13.3.3): Collier, Paul, and Jan Willem Gunning. 1999. "Why Has Africa Grown Slowly?" Journal of Economic Perspectives, 13 (3): 3-22. : This source discusses some of the issues Africa's economy had faced since the late twentieth century.
 
-Additionally, we completed research outside the data about Africa and found references that support the motivation of our project,
+Additionally, we completed research outside the data about Africa and found references that support the motivation of our project. For instance in their article ["Why Has Africa Grown Slowly"](https://www.aeaweb.org/articles?id=10.1257/jep.13.3.3), Collier, Paul, and Gunning discuss Africa's slow growth over since the late twentieth century and discuss some of the issues African economies have faced.
+
+###### Reference Citations:
+- Collier, Paul, and Jan Willem Gunning. 1999. "Why Has Africa Grown Slowly?" Journal of Economic Perspectives, 13 (3): 3-22.
 ##### Steps Already Taken
 We have completed a variety of tasks since beginning this project. They are detailed in the list below:
 - Came up with project subject.
-- Did background research into our subject
+- Did background research into our subject.
 - Found 4 datasets.
-- Began to import datasets into and write code for our SQLite3 database.
+- Began to import datasets into and write code for our SQLite3 database. Here is part of one of the imported datasets inside SQLite3:
+![SQLite3 Database Terminal](graphics/current-database.png)
 - Came up with questions & wrote the Status Update.
 
 ##### Steps Left to Complete
@@ -42,8 +45,3 @@ In order to ensure that work is spread out properly between group members, we ha
 ###### Christian
 ###### Robert
 ###### Jordan
-
-
-###### Please add screen shots in your progress report as relevant. The code to add graphics is the following:
-![myImage](graphics/gators.png)
-(edit as necessary)
