@@ -55,7 +55,7 @@ Though we have completed a variety of tasks since beginning this project, we sti
 In order to ensure that work is spread out properly between group members, we have assigned each group member tasks. Despite this, we will still try to work as a team, with each group member taking the lead on their assigned task and others supporting as necessary.
 
 ###### Christian
-- Add all datasets into the SQLite3 database so queries can be written can occur.
+- Add all datasets into the SQLite3 database so queries can be written.
 - Write queries.
 - Presentation and Report.
 
