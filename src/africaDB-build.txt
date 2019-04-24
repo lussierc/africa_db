@@ -20,6 +20,9 @@ create table HPI (
         HPI VARCHAR
 );
 
+drop table Resources;
+
+
 
 /* Import your data files. Use the below code to populate the tables from above. */
 /* If your data is not separated by tabs, then change the following line to reflect the delimiter. */
@@ -27,6 +30,7 @@ create table HPI (
 
 /* find the file and load it into sqlite3 which will create the database.*/
 .import data/hpi-data-2016.csv HPI
+.import data/API_Resource.csv Resources
 
 
 /* How to run this builder: */
