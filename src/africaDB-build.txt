@@ -21,6 +21,8 @@ create table HPI (
 );
 
 drop table Resources;
+drop table DevIndicators;
+drop table RealGDPGrowth;
 
 
 
@@ -32,6 +34,7 @@ drop table Resources;
 .import data/hpi-data-2016.csv HPI
 .import data/API_Resource.csv Resources
 .import data/African_Development_Indicators_Data.csv DevIndicators
+.import data/imf-real-gdp-growth.csv RealGDPGrowth
 
 
 /* How to run this builder: */
