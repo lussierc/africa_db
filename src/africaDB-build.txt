@@ -31,6 +31,7 @@ drop table Resources;
 /* find the file and load it into sqlite3 which will create the database.*/
 .import data/hpi-data-2016.csv HPI
 .import data/API_Resource.csv Resources
+.import data/African_Development_Indicators_Data.csv DevIndicators
 
 
 /* How to run this builder: */
