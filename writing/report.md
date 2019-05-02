@@ -4,11 +4,15 @@
 #### Final Report
 
 ##### Project Overview
-
+*Basically the Introduction*
 ###### Motivation
-Why did we choose this proje
+* Why did we choose this project?
+* How will this research benefit others?
 
 ###### Background Information
+* Explanation of related works
+  * How are they relevant to our Project?
+
 
 
 ###### Building Our Database System
