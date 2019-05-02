@@ -18,6 +18,22 @@
 ###### Building Our Database System
 
 
+<!-- OUTLINE:
+##### Research Question 1
+Question
+###### Introduction
+Why are we asking it? Why is relevant?
+
+###### Methods
+How did we answer it? What tools did we use? What data?
+Query
+
+###### Results
+Results
+How we know results from query are correct
+
+###### Graphics
+Graphics for results.  -->
 
 ##### Research Question 1
 Question
@@ -30,9 +46,10 @@ Query
 
 ###### Results
 Results
+How we know results from query are correct
 
 ###### Graphics
-Graphics for results
+Graphics for results.
 
 
 ##### Research Question 2
@@ -73,6 +90,7 @@ Graphics for results
 
 ###### Graphics
 
+#### References
 
 ###### Please add screen shots in your report. The code to add graphics is the following:
 ![myImage](graphics/gators.png)
