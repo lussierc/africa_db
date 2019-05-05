@@ -65,6 +65,34 @@ def user_query():
 
     conn.close()
 
+def edit_data():
+    """Perform update/edit on table."""
+    conn = sqlite3.connect("africaDB.sqlite3") # connect to the database
+
+    print("* Which table would you like to edit?:")
+    table_name = get_table_name()
+
+    print("* Choose what attribute to udpdate: ")
+    attribute = input()
+    print("* Choose a value for this attribute: ")
+    value = input()
+    print("* For what condition will this be updated? (Ex: Rank = 1): ")
+    condition = input()
+
+    update_command = "UPDATE {A} SET {B} = {C} WHERE {D}".format(A = table_name, B = attribute, C = value, D = condition)
+    conn.execute(update_command)
+    conn.commit()
+    conn.close()
+
+    print("Updating...")
+    print()
+
+
+def insert_data():
+    """Inserts data into table."""
+    conn = sqlite3.connect("africaDB.sqlite3") # connect to the database
+
+
 
 def main():
     """Manages the running of the interface."""
