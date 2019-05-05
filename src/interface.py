@@ -24,6 +24,7 @@ def get_table_name():
     while(table_name not in table_list):
         print("** The entered table does not exist in the database. Please re-enter the name:")
         table_name = input()
+    print()
     return table_name
 
 
@@ -37,11 +38,31 @@ def get_table_data():
     get_data_command = "SELECT * FROM {A}".format(A = table_name)
 
     result = conn.execute(get_data_command)
+    data = result.fetchall()
 
-    tables = result.fetchall()
-
-    for i in tables:
+    for i in data:
         print(i)
+
+    conn.close()
+
+
+def user_query():
+    """User chosen query from a table."""
+    conn = sqlite3.connect("africaDB.sqlite3") # connect to the database
+
+    print("* Which table would you like to query?:")
+    table_name = get_table_name()
+    print("* For what condition would you like to query for? (Ex: Rank = 1):")
+    condition = input()
+
+    query_command = "SELECT * FROM {A} WHERE {B}".format(A = table_name, B = condition)
+
+    result = conn.execute(query_command)
+    data = result.fetchall()
+
+    for i in data:
+        print(i)
+
     conn.close()
 
 
@@ -49,5 +70,6 @@ def main():
     """Manages the running of the interface."""
     welcome_message()
     get_table_data()
+    user_query()
 
 main()
