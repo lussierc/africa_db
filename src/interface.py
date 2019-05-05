@@ -105,7 +105,7 @@ def display_schema():
 
     print("Displaying schema...")
     print()
-    
+
     for i in data:
         print(i)
         print()
@@ -130,9 +130,25 @@ def insert_data():
         print("* Enter 1 to view database table schema to see what values to enter. Press 2 to skip this option.:")
         view_schema = int(input())
 
+    print("* Which table would you like to insert into?:")
+    table_name = get_table_name()
 
+    print("* Enter what (comma-seperated) attributes to insert: ")
+    attribute = input()
+    print("* Enter (comma-seperated) values for attributes: ")
+    value = input()
 
-
+    try:
+        insert_command = "INSERT INTO {A}({B}) VALUES ({C})".format(A = table_name, B = attribute, C = value)
+        conn.execute(insert_command)
+        conn.commit()
+        conn.close()
+        print()
+        print("Inserting data...")
+        print()
+    except:
+        print("Incorrect format. Exiting this option...")
+        print()
 
 
 def display_questions():
