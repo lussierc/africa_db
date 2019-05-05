@@ -35,6 +35,10 @@ We took a variety of steps to build our database system. We began by acquiring d
 After this, the builder file sets the separator which will be used to separate the data being read in by the Sqlite3 database. In this case, the separator is set as a comma, `,`, because the database will be reading in CSV files where the values are separated by commas. The builder file then contains code that will read the CSV files into the database, putting them in their specific tables, so that they can be accessed for work with queries and other database-related tasks.
 
 ###### Tables & Schema
+
+###### User Interface
+
+
 <!-- OUTLINE:
 ##### Research Question 1
 Question
@@ -51,7 +55,6 @@ How we know results from query are correct
 
 ###### Graphics
 Graphics for results.  -->
-
 #### Research Question 1
 Africa's Real GDP Growth rate seemed to steadily increase for a few decades, but then it took a downturn. When did this downturn occur and why?
 
