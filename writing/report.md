@@ -65,7 +65,7 @@ Africa's Real GDP Growth rate seemed to steadily increase for a few decades, but
 ##### Introduction
 Why are we asking it? Why is relevant?
 
-##### Quei
+##### Queries
 How did we answer it? What tools did we use? What data?
 The query used in the database was:
 ```
@@ -82,6 +82,10 @@ Graphics for results.
 <!-- ------------------------------------------------------------------ -->
 #### Research Question 2
 Is there a correlation between GDP growth/GDP per capita and inequality rankings (income inequality)?
+
+#### Introduction
+
+####
 
 The queries used in this question were:
 ```
