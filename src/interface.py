@@ -12,6 +12,7 @@ def welcome_message():
 
 
 def display_tables_info():
+    """Displays the info about each table."""
     print()
     print("This interface allows users to interact with the following tables:")
     print(" - HPI: Happy Planet Index information about countries from around the world.")
@@ -23,11 +24,11 @@ def display_tables_info():
 
 def get_table_name():
     """Gets the name of a table."""
-    table_list = ["HPI", "DevIndicators", "RealGDPGrowth", "Resources"]
+    table_list = ["HPI", "DevIndicators", "RealGDPGrowth", "Resources"] # list of tables in DB
 
     table_name = input()
 
-    while(table_name not in table_list):
+    while(table_name not in table_list): # see if entered table name is in DB
         print("** The entered table does not exist in the database. Please re-enter the name:")
         table_name = input()
     print()
@@ -41,15 +42,15 @@ def get_table_data():
     print("* Please enter a valid table name to display it's contents:")
     table_name = get_table_name()
 
-    get_data_command = "SELECT * FROM {A}".format(A = table_name)
+    get_data_command = "SELECT * FROM {A}".format(A = table_name) # query that gets the results from the given table
 
-    result = conn.execute(get_data_command)
+    result = conn.execute(get_data_command) # executes the querys
     data = result.fetchall()
 
     for i in data:
-        print(i)
+        print(i) # prints query results
 
-    conn.close()
+    conn.close() # close DB connection
 
 
 def user_query():
@@ -63,13 +64,13 @@ def user_query():
 
     query_command = "SELECT * FROM {A} WHERE {B}".format(A = table_name, B = condition)
 
-    result = conn.execute(query_command)
+    result = conn.execute(query_command) # executes the query
     data = result.fetchall()
 
     for i in data:
-        print(i)
+        print(i) # prints query results
 
-    conn.close()
+    conn.close() # closes DB connection
 
 
 def edit_data():
@@ -87,8 +88,8 @@ def edit_data():
     condition = input()
 
     update_command = "UPDATE {A} SET {B} = {C} WHERE {D}".format(A = table_name, B = attribute, C = value, D = condition)
-    conn.execute(update_command)
-    conn.commit()
+    conn.execute(update_command) # execute the update command
+    conn.commit() # commit the changess
     conn.close()
 
     print("Updating...")
@@ -99,14 +100,14 @@ def display_schema():
     """Displays database schema."""
     conn = sqlite3.connect("africaDB.sqlite3") # connect to the database
 
-    schema = "select sql from sqlite_master where type='table'"
+    schema = "select sql from sqlite_master where type='table'" # get the schema using this command
     result = conn.execute(schema)
     data = result.fetchall()
 
     print("Displaying schema...")
     print()
 
-    for i in data:
+    for i in data: # print schema results
         print(i)
         print()
 
