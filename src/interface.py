@@ -95,9 +95,44 @@ def edit_data():
     print()
 
 
+def display_schema():
+    """Displays database schema."""
+    conn = sqlite3.connect("africaDB.sqlite3") # connect to the database
+
+    schema = "select sql from sqlite_master where type='table'"
+    result = conn.execute(schema)
+    data = result.fetchall()
+
+    print("Displaying schema...")
+    print()
+    
+    for i in data:
+        print(i)
+        print()
+
+    conn.close()
+
+
 def insert_data():
     """Inserts data into table."""
     conn = sqlite3.connect("africaDB.sqlite3") # connect to the database
+
+    print("* Enter 1 to view database table schema to see what values to enter. Press 2 to skip this option.:")
+    view_schema = int(input())
+    if view_schema == 1:
+        print()
+        display_schema()
+        print()
+    elif view_schema == 2:
+        pass
+    else:
+        print("** Incorrect option entered.")
+        print("* Enter 1 to view database table schema to see what values to enter. Press 2 to skip this option.:")
+        view_schema = int(input())
+
+
+
+
 
 
 def display_questions():
@@ -107,7 +142,7 @@ def display_questions():
     print(" 3) Is there a correlation between living standards and GDP per capita?")
     print(" 4) Are countries that live in a specific region overall happier than countries that don't live in that region? (i.e. Sub-Saharan Africa and MENA)")
     print(" 5) Do countries with a higher natural resources rent (as a % of GDP) have a higher GDP per capita or vice versa? Do the findings from this question make steps to validate the idea of the resource curse?")
-
+    print()
 
 
 def question_queries():
@@ -173,6 +208,7 @@ def question_queries():
     else:
         print("Incorrect response; cancelling this action!")
 
+
 def main():
     """Manages the running of the interface."""
     print()
@@ -224,4 +260,4 @@ def main():
         exit_decision = input()
 
 welcome_message() # display interface welcome message
-main()
+main() # call main to run the program
