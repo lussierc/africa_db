@@ -36,6 +36,10 @@ After this, the builder file sets the separator which will be used to separate t
 
 ###### Tables & Schema
 
+![SQLite3 Database Terminal](graphics/current-database.png)
+
+
+
 ###### User Interface
 
 
