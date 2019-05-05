@@ -41,24 +41,26 @@ After this, the builder file sets the separator which will be used to separate t
 
 
 ###### User Interface
+We looked into a variety of different ways to create a user interface for our project. The user interface needed to allow users to interact with the database but not contain visible querying code. With this criteria in mind, we narrowed down our interface options to three different tools, Djano, Flask, or a command-line based Python interface. Eventually, we decided to create a Python command-line interface for a few reasons. For one, we felt that we had more experience in using Python with Sqlite3 for such a purpose which would make it easier and less time consuming to implement than the other options. Additionally, we felt that for the criteria required, a command-line interface would be very simple to use while still allowing the user to complete all necessary actions.
 
+The command line interface allows the user to complete a number of tasks, by giving users a variety of different options with how to run the program. For instance, it allows the user to display all of the data from a table of their choosing, without forcing them to write a query and instead allowing them to just enter a table name. Additionally, there are features in place that allow the user to get the names of the tables in the database, a brief description of each, and the table schema. The user can also perform a query in a table of their choosing, using conditions that they specify. Additionally, users can also insert content into tables of their choosing and update/edit tables. Also, users can use a feature that will display the research questions for the project, the query used to solve them, and the query results.
 
-<!-- OUTLINE:
-##### Research Question 1
-Question
-###### Introduction
-Why are we asking it? Why is relevant?
+The user interface when the program is first ran (using the command `python3 interface.py`):
+![User interface start up screen with welcome message.](graphics/user-interface-startup.png)
 
-###### Methods
-How did we answer it? What tools did we use? What data?
-Query
+Upon starting the program and seeing this interface, the user can then choose which option they would like to use by reading the description of the option and then simply entering the number pertaining to their chosen option. This option will then call a method pertaining to this option.
 
-###### Results
-Results
-How we know results from query are correct
+For instance, here is the output of a user who choose to run option 1 which allows them to display the data from a selected table:
+![User interface running with option 1.](graphics/user-interface-1.png)
 
-###### Graphics
-Graphics for results.  -->
+Additionally, here is the output of a user running option 6 which allows the user to update the table:
+![User interface running with option 6.](graphics/user-interface-6.png)
+
+Also, the program has functionality that allows the user to continue using the program after running through an option, meaning that they can choose to exit the program or run another option. Here is an example of this:
+![User interface displaying the exit option after using option 1.](graphics/user-interface-exit.png)
+
+This user interface, created using Python and the Sqlite3 package, allows the user to easily interact with the Sqlite3 database in a text-based setting. With this, it does not force the user to concern themselves with writing Sqlite3 queries or insert statements. It instead allows the user to interact with the database in a simple manner, allowing them to do things such as look at a table's data and schema, perform update and insert commands for a specified table, and perform customized queries. This interface enhances the user experience when interacting with the project database.
+
 #### Research Question 1
 Africa's Real GDP Growth rate seemed to steadily increase for a few decades, but then it took a downturn. When did this downturn occur and why?
 
@@ -81,21 +83,23 @@ Graphics for results.
 
 <!-- ------------------------------------------------------------------ -->
 #### Research Question 2
-Is there a correlation between GDP growth/GDP per capita and inequality rankings (income inequality)?
+Is there a correlation between GDP per capita and inequality rankings (income inequality)?
 
 #### Introduction
 
-####
+It can be reasoned that wealthier countries should have a lower inequality gap since there is more wealth to be distributed. However, this may not always be the case due to various reasons. For example, the style of government could facilitate mass hoarding of wealth by the upper class, which tends to happen in dictatorships. The goal of this question find a correlation between inequality and a countries GDP.
+
+#### Queries
+This question used data from the HPI table to get information regarding inequality. It also used data from the DevIndicators table in order to look at the GDP Per Capita for African countries.
 
 The queries used in this question were:
 ```
 SELECT Country, Inequality from HPI WHERE region = "Sub Saharan Africa" OR "Middle East and North Africa";
 
-select "Time", "Country Name", "GDP per capita (current US$) [NY.GDP.PCAP.CD]" from DevIndicators WHERE "Country Name" = "Mauritius" OR "Country Name" = "Ethiopia" OR "Country Name" = "Zambia" OR "Country Name" = "Kenya" OR "Country Name" = "Mozambique" OR "Country Name" = "Comoros" OR "Country Name" = "Nigeria" OR "Country Name" = "Liberia" OR "Country Name" = "Tanzania" OR "Country Name" = "Malawi" OR "Country Name" = "Zimbabwe" OR "Country Name" = "Senegal" OR "Country Name" = "Namibia" OR "Country Name" = "Ghana" OR "Country Name" = "Rwanda" OR "Country Name" = "Uganda" OR "Country Name" = "Republic of Congo" OR "Country Name" = "Mauritania" OR "Country Name" = "Burkina Faso" OR "Country Name" = "Gabon" OR "Country Name" = "Niger" OR "Country Name" = "Cameroon" OR "Country Name" = "Lesotho" OR "Country Name" = "Botswana" OR "Country Name" = "Djibouti" OR "Country Name" = "South Africa" OR "Country Name" = "Guinea" OR "Country Name" = "Burundi" OR "Country Name" = "Swaziland" OR "Country Name" = "Sierra Leone" OR "Country Name" = "Cote d'Ivoire" OR "Country Name" = "Benin" OR "Country Name" = "Togo" OR "Country Name" = "Chad";
+SELECT "Time", "Country Name", "GDP per capita (current US$) [NY.GDP.PCAP.CD]" from DevIndicators WHERE "Country Name" = "Mauritius" OR "Country Name" = "Ethiopia" OR "Country Name" = "Zambia" OR "Country Name" = "Kenya" OR "Country Name" = "Mozambique" OR "Country Name" = "Comoros" OR "Country Name" = "Nigeria" OR "Country Name" = "Liberia" OR "Country Name" = "Tanzania" OR "Country Name" = "Malawi" OR "Country Name" = "Zimbabwe" OR "Country Name" = "Senegal" OR "Country Name" = "Namibia" OR "Country Name" = "Ghana" OR "Country Name" = "Rwanda" OR "Country Name" = "Uganda" OR "Country Name" = "Republic of Congo" OR "Country Name" = "Mauritania" OR "Country Name" = "Burkina Faso" OR "Country Name" = "Gabon" OR "Country Name" = "Niger" OR "Country Name" = "Cameroon" OR "Country Name" = "Lesotho" OR "Country Name" = "Botswana" OR "Country Name" = "Djibouti" OR "Country Name" = "South Africa" OR "Country Name" = "Guinea" OR "Country Name" = "Burundi" OR "Country Name" = "Swaziland" OR "Country Name" = "Sierra Leone" OR "Country Name" = "Cote d'Ivoire" OR "Country Name" = "Benin" OR "Country Name" = "Togo" OR "Country Name" = "Chad";
 ```
-##### Introduction
 
-##### Methods
+The first query used to answer this question gets the country name and inequality percentage ranking from the HPI table where the region is either Sub-Saharan Africa or the MENA region so that only African countries are outputted. The second query selects the year ("Time"), Country Name, and GDP Per Capita from the DevIndicators table. Additionally, this query uses "OR" statements to find and display data from African countries only.
 
 ##### Results
 
@@ -106,6 +110,8 @@ select "Time", "Country Name", "GDP per capita (current US$) [NY.GDP.PCAP.CD]" f
 Is there a correlation between living standards (HPI) and GDP per capita?
 
 ##### Introduction
+
+In most cases wealthier countries are able provide a better standard of living for their citizens. For example, in the U.S. inequality tends to be high between different economic classes, however this tends to negligible in many cases because the living standard for almost any American is higher than that of of a third world country. In some cases the living standard for the poorest segment of Americans could be better than that of the upper class of other poorer nations. For a continent like Africa, which has many third world nations,
 
 ##### Queries
 
@@ -141,18 +147,19 @@ select * from HPI where region = "Sub Saharan Africa" OR "Middle East and North 
 Do African countries with a higher natural resources rent (as a % of GDP) have a higher GDP per capita or vice versa? Do the findings from this question make steps to validate the idea of the resource curse?
 
 ##### Introduction
-Many countries in Africa are afflicted by the resource curse, which when a country has an abundance of natural resources, but they are unable to properly collect them due to various reasons. Major reasons include intercontinental wars, civil wars, a lack of technology, or they're simply too dangerous to extract. This has led to several countries that have a low GDP, yet an abundance of resources.
+Many countries in Africa are afflicted by the resource curse, which when a country has an abundance of natural resources, but they are unable to properly collect them due to various reasons. Major reasons include intercontinental wars, civil wars, a lack of technology, or they're simply too dangerous to extract. This has led to several countries that have a low GDP, yet an abundance of resources. The queries for this question aim to affirm whether this resource curse is true.
 
 ##### Queries
 
+The following queries were used to answer this question:
 ```
-select * from Resources WHERE "2011" > 11;
-```
-```
+select "Country Name", "2011" from Resources;
+
 select * from DevIndicators WHERE "Time" = 2011;
 ```
 
 ##### Results
+
 
 ###### Graphics
 
