@@ -2,11 +2,16 @@
 
 import sqlite3
 
+
 def welcome_message():
     """Displays welcome message."""
     print("+-----------------------------------------+")
     print("|    Welcome to the AfricaDB Interface    |")
     print("+-----------------------------------------+")
+    display_tables_info()
+
+
+def display_tables_info():
     print()
     print("This interface allows users to interact with the following tables:")
     print(" - HPI: Happy Planet Index information about countries from around the world.")
@@ -14,6 +19,7 @@ def welcome_message():
     print(" - RealGDPGrowth: Real GDP Growth data for a number of years.")
     print(" - Resources: Resource Rent data for countries.")
     print()
+
 
 def get_table_name():
     """Gets the name of a table."""
@@ -65,6 +71,7 @@ def user_query():
 
     conn.close()
 
+
 def edit_data():
     """Perform update/edit on table."""
     conn = sqlite3.connect("africaDB.sqlite3") # connect to the database
@@ -93,11 +100,122 @@ def insert_data():
     conn = sqlite3.connect("africaDB.sqlite3") # connect to the database
 
 
+def display_questions():
+    print("Project questions:")
+    print(" - ")
+
+
+def question_queries():
+    """Perform the queries used for research project."""
+    conn = sqlite3.connect("africaDB.sqlite3") # connect to the database
+
+    print("* Type 1 to display the project research questions. Type 2 to skip this.")
+    question_dec = input()
+    if question_dec == 1:
+        display_questions()
+    else:
+        pass
+
+    print("* Type Question Number to display queries & results.")
+    question_num = input()
+
+    if question_num == 1:
+        query_command = "SELECT \"2008\", \"2009\",\"2010\",\"2011\",\"2012\" from RealGDPGrowth"
+        print("Using this query: ", query_command)
+        result = conn.execute(query_command)
+        data = result.fetchall()
+
+        for i in data:
+            print(i)
+
+    elif question_num == 2:
+        query_command = "NOPE"
+        print("Using this query: ", query_command)
+        result = conn.execute(query_command)
+        data = result.fetchall()
+
+        for i in data:
+            print(i)
+
+    elif question_num == 3:
+        query_command = "NOPE"
+        print("Using this query: ", query_command)
+        result = conn.execute(query_command)
+        data = result.fetchall()
+
+        for i in data:
+            print(i)
+
+    elif question_num == 4:
+        query_command = "select * from HPI where region = \"Sub Saharan Africa\" OR \"Middle East and North Africa\""
+        print("Using this query: ", query_command)
+        result = conn.execute(query_command)
+        data = result.fetchall()
+
+        for i in data:
+            print(i)
+
+    elif question_num == 5:
+        query_command = "NOPE"
+        print("Using this query: ", query_command)
+        result = conn.execute(query_command)
+        data = result.fetchall()
+
+        for i in data:
+            print(i)
+
+    else:
+        print("Incorrect response; cancelling this action!")
 
 def main():
     """Manages the running of the interface."""
-    welcome_message()
-    get_table_data()
-    user_query()
+    print()
+    print("Please select an option from below:")
+    print(" - 1: Display data from a selected table.")
+    print(" - 2: Display schema.")
+    print(" - 3: Perform a specific query based on user-chosen conditions.")
+    print(" - 4: Display query and query results for a project research question.")
+    print(" - 5: Add content to a table.")
+    print(" - 6: Update/edit a table.")
+    print(" - 7: Display the table names and descriptions.")
 
+    print("* Enter your chosen option's number:")
+    option = int(input())
+    print()
+
+    if option == 1:
+        get_table_data()
+    elif option == 2:
+        display_schema()
+    elif option == 3:
+        user_query()
+    elif option == 4:
+        question_queries()
+    elif option == 5:
+        insert_data()
+    elif option == 6:
+        edit_data()
+    elif option == 7:
+        display_tables_info()
+    else:
+        print("** Incorrect option.")
+        main()
+
+    print()
+    print("Would you like to exit the program? Enter 1 to Exit or 2 to Continue:")
+    exit_decision = int(input())
+    print()
+
+    if exit_decision == 1:
+        print("Exiting...")
+        print()
+        pass
+    elif exit_decision == 2:
+        main()
+    else:
+        print("Incorrect response.")
+        print("Would you like to exit the program? Enter 1 to Exit or 2 to Continue:")
+        exit_decision = input()
+
+welcome_message() # display interface welcome message
 main()
