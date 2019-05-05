@@ -102,7 +102,12 @@ def insert_data():
 
 def display_questions():
     print("Project questions:")
-    print(" - ")
+    print(" 1) Africa's Real GDP Growth rate seemed to steadily increase for a few decades, but then it took a downturn. When did this downturn occur and why?")
+    print(" 2) Do countries with higher GDP growth/GDP per capita have higher Happy Planet Indexes (representing citizen happiness)?")
+    print(" 3) Is there a correlation between living standards and GDP per capita?")
+    print(" 4) Are countries that live in a specific region overall happier than countries that don't live in that region? (i.e. Sub-Saharan Africa and MENA)")
+    print(" 5) Do countries with a higher natural resources rent (as a % of GDP) have a higher GDP per capita or vice versa? Do the findings from this question make steps to validate the idea of the resource curse?")
+
 
 
 def question_queries():
@@ -110,21 +115,22 @@ def question_queries():
     conn = sqlite3.connect("africaDB.sqlite3") # connect to the database
 
     print("* Type 1 to display the project research questions. Type 2 to skip this.")
-    question_dec = input()
+    question_dec = int(input())
     if question_dec == 1:
         display_questions()
     else:
         pass
 
     print("* Type Question Number to display queries & results.")
-    question_num = input()
+    question_num = int(input())
 
     if question_num == 1:
         query_command = "SELECT \"2008\", \"2009\",\"2010\",\"2011\",\"2012\" from RealGDPGrowth"
         print("Using this query: ", query_command)
         result = conn.execute(query_command)
         data = result.fetchall()
-
+        print()
+        print("Displaying results:")
         for i in data:
             print(i)
 
