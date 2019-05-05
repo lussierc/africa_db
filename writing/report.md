@@ -65,7 +65,7 @@ Africa's Real GDP Growth rate seemed to steadily increase for a few decades, but
 ##### Introduction
 Why are we asking it? Why is relevant?
 
-##### Methods
+##### Quei
 How did we answer it? What tools did we use? What data?
 The query used in the database was:
 ```
@@ -81,8 +81,14 @@ Graphics for results.
 
 <!-- ------------------------------------------------------------------ -->
 #### Research Question 2
-Do countries with higher GDP growth/GDP per capita have higher Happy Planet Indexes (representing citizen happiness)?
+Is there a correlation between GDP growth/GDP per capita and inequality rankings (income inequality)?
 
+The queries used in this question were:
+```
+SELECT Country, Inequality from HPI WHERE region = "Sub Saharan Africa" OR "Middle East and North Africa";
+
+select "Time", "Country Name", "GDP per capita (current US$) [NY.GDP.PCAP.CD]" from DevIndicators WHERE "Country Name" = "Mauritius" OR "Country Name" = "Ethiopia" OR "Country Name" = "Zambia" OR "Country Name" = "Kenya" OR "Country Name" = "Mozambique" OR "Country Name" = "Comoros" OR "Country Name" = "Nigeria" OR "Country Name" = "Liberia" OR "Country Name" = "Tanzania" OR "Country Name" = "Malawi" OR "Country Name" = "Zimbabwe" OR "Country Name" = "Senegal" OR "Country Name" = "Namibia" OR "Country Name" = "Ghana" OR "Country Name" = "Rwanda" OR "Country Name" = "Uganda" OR "Country Name" = "Republic of Congo" OR "Country Name" = "Mauritania" OR "Country Name" = "Burkina Faso" OR "Country Name" = "Gabon" OR "Country Name" = "Niger" OR "Country Name" = "Cameroon" OR "Country Name" = "Lesotho" OR "Country Name" = "Botswana" OR "Country Name" = "Djibouti" OR "Country Name" = "South Africa" OR "Country Name" = "Guinea" OR "Country Name" = "Burundi" OR "Country Name" = "Swaziland" OR "Country Name" = "Sierra Leone" OR "Country Name" = "Cote d'Ivoire" OR "Country Name" = "Benin" OR "Country Name" = "Togo" OR "Country Name" = "Chad";
+```
 ##### Introduction
 
 ##### Methods
@@ -97,11 +103,11 @@ Is there a correlation between living standards (HPI) and GDP per capita?
 
 ##### Introduction
 
-##### Methods
+##### Queries
 
-The queries used in the database were:
+The queries used in the question were:
 ```
-select Country, HPI from HPI where region = "Sub Saharan Africa" OR "Middle East and North Africa";
+SELECT Country, HPI from HPI WHERE region = "Sub Saharan Africa" OR "Middle East and North Africa";
 
 select "Time", "Country Name", "GDP per capita (current US$) [NY.GDP.PCAP.CD]" from DevIndicators;
 ```
@@ -115,7 +121,7 @@ Are countries that live in a specific region overall happier than countries that
 
 ##### Introduction
 
-##### Methods
+##### Queries
 
 The query used in the database was:
 ```
@@ -131,10 +137,10 @@ select * from HPI where region = "Sub Saharan Africa" OR "Middle East and North 
 Do African countries with a higher natural resources rent (as a % of GDP) have a higher GDP per capita or vice versa? Do the findings from this question make steps to validate the idea of the resource curse?
 
 ##### Introduction
+Many countries in Africa are afflicted by the resource curse, which when a country has an abundance of natural resources, but they are unable to properly collect them due to various reasons. Major reasons include intercontinental wars, civil wars, a lack of technology, or they're simply too dangerous to extract. This has led to several countries that have a low GDP, yet an abundance of resources.
 
-##### Methods
+##### Queries
 
-Queries:
 ```
 select * from Resources WHERE "2011" > 11;
 ```
