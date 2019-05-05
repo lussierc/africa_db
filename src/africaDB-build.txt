@@ -25,7 +25,6 @@ drop table DevIndicators;
 drop table RealGDPGrowth;
 
 
-
 /* Import your data files. Use the below code to populate the tables from above. */
 /* If your data is not separated by tabs, then change the following line to reflect the delimiter. */
 .separator ","
