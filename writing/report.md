@@ -99,6 +99,12 @@ Is there a correlation between living standards (HPI) and GDP per capita?
 
 ##### Methods
 
+The queries used in the database were:
+```
+select Country, HPI from HPI where region = "Sub Saharan Africa" OR "Middle East and North Africa";
+
+select "Time", "Country Name", "GDP per capita (current US$) [NY.GDP.PCAP.CD]" from DevIndicators;
+```
 ##### Results
 
 ###### Graphics
