@@ -142,7 +142,7 @@ To determine when Africa' Real GDP Growth rate took a sudden downturn, we used d
 SELECT * FROM RealGDPGrowth;
 ```
 
-This simple query allowed us to see trends and narrow down the more specific years to look for where this downturn. With this we created our final query with these narrowed down years, from 2008-2012.
+This simple query allowed us to see trends and narrow down the more specific years to look for where this downturn. With this we created our final query with these narrowed down years, from 2008-2012. This allowed us to better see when the downturn began
 
 The finalized query used in the database was:
 ```
@@ -160,7 +160,7 @@ Graphics for results.
 
 <!-- ------------------------------------------------------------------ -->
 #### Research Question 2
-Is there a correlation between GDP per capita and inequality rankings (income inequality)?
+Is there a correlation between GDP per capita and inequality of outcomes rankings (income inequality)?
 
 ##### Introduction
 
@@ -179,45 +179,21 @@ SELECT "Time", "Country Name", "GDP per capita (current US$) [NY.GDP.PCAP.CD]" f
 The first query used to answer this question gets the country name and inequality percentage ranking from the HPI table where the region is either Sub-Saharan Africa or the MENA region so that only African countries are outputted. The second query selects the year ("Time"), Country Name, and GDP Per Capita from the DevIndicators table. Additionally, this query uses "OR" statements to find and display data from African countries only.
 
 ##### Results
+Here are just a portion of our results, which combines the content from both the above queries:
 ```
-Mauritius|17%
-Ethiopia|36%
-Zambia|41%
-Kenya|38%
-Mozambique|43%
-Comoros|36%
-Nigeria|44%
-Liberia|38%
-Tanzania|33%
-Malawi|45%
-Zimbabwe|37%
-Senegal|33%
-Namibia|26%
-Ghana|38%
-Rwanda|37%
-Uganda|41%
-Republic of Congo|40%
-Mauritania|37%
-Burkina Faso|43%
-Gabon|36%
-Niger|40%
-Cameroon|47%
-Lesotho|42%
-Botswana|28%
-Djibouti|42%
-South Africa|33%
-Guinea|42%
-Burundi|48%
-Swaziland|41%
-Sierra Leone|50%
-Cote d'Ivoire|45%
-Benin|44%
-Togo|43%
-Chad|51%
+Country - Inequality % - GDP Per Capita
+Mauritius - 17% - 533.313655
+Ethiopia - 36% - 320.3786726
+Zambia - 41% - 1425.313794
+Kenya - 38% - 808.0005718
+Mozambique - 43% - 533.3136652
+Comoros - 36% - 809.5740625
+Nigeria - 44% - 1501.721583
 ```
 
+These results indicate that there might be a slight correlation between the Inequality % of a country and its GDP Per Capita.
 ###### Graphics
-
+![Inequality vs GDP Per Capita Plot](graphics/Inequality-Plot.png)
 <!-- ------------------------------------------------------------------ -->
 #### Research Question 3
 Is there a correlation between living standards (HPI) and GDP per capita?
@@ -345,6 +321,6 @@ Liberia - 40.3506749335596 - 374.333222192516
 Above it shows that while both countries have heavily invested into using resources to fund their respective economies, their GDP's are very far apart. This happens several other times in the data, but these two were the best example. Therefore there is no direct correlation between a countries resource rent percentage and GDP. After researching both the countries we found Gabon to be a relatively stable country and having no major conflicts in the past couple decades. However, this is much different than Liberia's history, especially in recent times. In the span of 14 years they've had two civil wars, with the first starting in 1989 and the second ending in 2003. This does not mean Gabon has the resource curse because their GDP is largely based on resources, but due to years of war and corrupt governments the country continues to struggle to reach economic prosperity. This is most likely the case with other countries such as Guinea and Zambia, both of which have problems with their governments.
 
 ###### Graphics
-
+![Resource Rent % of GDP vs GDP Per Capita](graphics/Resource_GDP.png)
 <!-- ------------------------------------------------------------------ -->
 #### Concluding Remarks
