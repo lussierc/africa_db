@@ -42,11 +42,72 @@ Inside of our Sqlite3 database system, we created 4 tables, detailed below:
 
 All of these tables contain important content that was useful for answering the project questions. More information about the importance of each table in terms of what questions it was used for will be provided with the writing for each question.
 
-SCHEMA
-
+Creating the schema is extremely important for determining how the database will function. Luckily, we only had to manually create the schema for just a few of the tables in our database. One of these tables was the HPI table, containing the Happy Planet Index data. We created a name for every attribute and it's type, such as numeric or varchar. The schema for this table can be seen below:
 ![SQLite3 Database Terminal](graphics/current-database.png)
 
+For the other tables, we just imported them and in doing this Sqlite3 automatically created the necessary schema for these tables.
 
+Here is the schema for 2/3 other tables in the database:
+```
+CREATE TABLE DevIndicators(
+  "Time" TEXT,
+  "Time Code" TEXT,
+  "Country Name" TEXT,
+  "Country Code" TEXT,
+  "GDP growth (annual %) [NY.GDP.MKTP.KD.ZG]" TEXT,
+  "GDP per capita (current US$) [NY.GDP.PCAP.CD]" TEXT
+);
+CREATE TABLE RealGDPGrowth(
+  "1980" TEXT,
+  "1981" TEXT,
+  "1982" TEXT,
+  "1983" TEXT,
+  "1984" TEXT,
+  "1985" TEXT,
+  "1986" TEXT,
+  "1987" TEXT,
+  "1988" TEXT,
+  "1989" TEXT,
+  "1990" TEXT,
+  "1991" TEXT,
+  "1992" TEXT,
+  "1993" TEXT,
+  "1994" TEXT,
+  "1995" TEXT,
+  "1996" TEXT,
+  "1997" TEXT,
+  "1998" TEXT,
+  "1999" TEXT,
+  "2000" TEXT,
+  "2001" TEXT,
+  "2002" TEXT,
+  "2003" TEXT,
+  "2004" TEXT,
+  "2005" TEXT,
+  "2006" TEXT,
+  "2007" TEXT,
+  "2008" TEXT,
+  "2009" TEXT,
+  "2010" TEXT,
+  "2011" TEXT,
+  "2012" TEXT,
+  "2013" TEXT,
+  "2014" TEXT,
+  "2015" TEXT,
+  "2016" TEXT,
+  "2017" TEXT,
+  "2018" TEXT,
+  "2019" TEXT,
+  "2020" TEXT,
+  "2021" TEXT,
+  "2022" TEXT,
+  "2023" TEXT,
+  "2024" TEXT,
+);
+```
+
+Below is a diagram of how the database tables are populated and how schema is automatically created if necessary:
+![Diagram](graphics/diagram.png)
 
 ###### User Interface
 We looked into a variety of different ways to create a user interface for our project. The user interface needed to allow users to interact with the database but not contain visible querying code. With this criteria in mind, we narrowed down our interface options to three different tools, Django, Flask, or a command-line based Python interface. Eventually, we decided to create a Python command-line interface for a few reasons. For one, we felt that we had more experience in using Python with Sqlite3 for such a purpose which would make it easier and less time consuming to implement than the other options. Additionally, we felt that for the criteria required, a command-line interface would be very simple to use while still allowing the user to complete all necessary actions.
@@ -244,32 +305,33 @@ select * from DevIndicators WHERE "Time" = 2011;
 
 ##### Results
 ```
-Angola|44.5142476068548 5318.0403682016
-Benin|4.76591951929875 801.644281225183
-Botswana|3.61844801327403 8532.61722168124
-Central African Republic|9.35334782277437 489.146364001488
-Cote d'Ivoire|8.80536500677469 1194.55859933097
-Egypt, Arab Rep.|12.0508676470673 2780.94924552693
-Ethiopia|17.974887804527 356.967287240092
-Gabon|39.300279159929 11113.8884680599
-Guinea|21.6059540351796 497.90485542705
-Gambia, The|7.01314792175681 505.760570130748
-Guinea-Bissau|13.2552539075768 625.549056362593
-Kenya|3.32036193476484 808.000571785527
-Liberia|40.3506749335596 374.333222192516
-Lesotho|3.59849853015823 105.91323856084
-Madagascar|7.39439042593381 465.011424822866
-Mali|13.1342707005088 683.511241908842
-Mozambique|9.77201852840251 533.313665208799
-Niger|10.784940994768 374.445406345683
-Nigeria|18.1962733026269 1501.72158251684
-Rwanda|6.96956335829798 582.555660780284
-Sudan|21.5884851590529 1866.44473303669
-Senegal|5.01949916868631 1119.35728769979
-Uganda|12.6504981990651 487.105498050193
-South Africa|8.63690139269013 8070.03209040967
-Zambia|21.8108034497212 1425.31379369828
-Zimbabwe|10.9992668914335 757.089017888128
+Country Name - Resource Rent (& of GDP) - GDP Growth Rate
+Angola - 44.5142476068548 - 5318.0403682016
+Benin - 4.76591951929875 - 801.644281225183
+Botswana - 3.61844801327403 - 8532.61722168124
+Central African Republic - 9.35334782277437 - 489.146364001488
+Cote d'Ivoire - 8.80536500677469 - 1194.55859933097
+Egypt, Arab Rep. - 12.0508676470673 - 2780.94924552693
+Ethiopia - 17.974887804527 - 356.967287240092
+Gabon - 39.300279159929 - 11113.8884680599
+Guinea - 21.6059540351796 - 497.90485542705
+Gambia - 7.01314792175681 - 505.760570130748
+Guinea-Bissau - 13.2552539075768 - 625.549056362593
+Kenya - 3.32036193476484 - 808.000571785527
+Liberia - 40.3506749335596 - 374.333222192516
+Lesotho - 3.59849853015823 - 105.91323856084
+Madagascar - 7.39439042593381 - 465.011424822866
+Mali - 13.1342707005088 - 683.511241908842
+Mozambique - 9.77201852840251 - 533.313665208799
+Niger - 10.784940994768 - 374.445406345683
+Nigeria - 18.1962733026269 - 1501.72158251684
+Rwanda - 6.96956335829798 - 582.555660780284
+Sudan - 21.5884851590529 - 1866.44473303669
+Senegal - 5.01949916868631 - 1119.35728769979
+Uganda - 12.6504981990651 - 487.105498050193
+South Africa - 8.63690139269013 - 8070.03209040967
+Zambia - 21.8108034497212 - 1425.31379369828
+Zimbabwe - 10.9992668914335 - 757.089017888128
 ```
 
 
@@ -277,8 +339,3 @@ Zimbabwe|10.9992668914335 757.089017888128
 
 <!-- ------------------------------------------------------------------ -->
 #### Concluding Remarks
-
-
-###### Please add screen shots in your report. The code to add graphics is the following:
-![myImage](graphics/gators.png)
-(edit as necessary)
