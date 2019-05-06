@@ -259,7 +259,7 @@ We used this to get the HPI scores of each region and try and figure out which r
 ##### Results
 Based on the results from our query, the MENA (Middle East and North Africa) region seems to be happier than the SSA (Sub-Saharan Africa). The top of the list in terms of HPI rankings were dominated by MENA countries when comparing MENA and SSA countries. This makes sense because MENA countries have been found to be better off economically and are often more developed than SSA countries.
 
-Here are a portion of our results:
+Here is a portion of our results:
 ```
 22|Palestine|Middle East and North Africa|72.6|4.6|24%|1.2|34.5
 30|Algeria|Middle East and North Africa|74.3|5.6|24%|2.1|33.3
@@ -285,9 +285,10 @@ As discussed before, MENA countries seem to take up more spots at the top of the
 <!-- Based on the results from our query, Sub Sahara Africa seems to be overall happier than the Middle East and North Africa. Looking at Africa's history, this does make sense. The Sub Saharan region in Africa overall have worse socio-economic indicators than the Middle East and North Africa region but there are not quite as many revolts within in country. A big thing that struck the Middle East and North African region was the Arab Spring. The Arab Spring was a string of revolts lead by the residents of a country. This was a big thing in the Middle East and North Africa region so it makes sense why the residents of the Middle East and North African region would have an overall less happy score than the residents of the Sub Sahara region. -->
 
 ###### Graphics
+Happy Planet Index for African countries in MENA and SSA regions.
 ![HPI Region Graph](graphics/HPI-Region-Plot.png)
-![User interface running with option 1.](graphics/user-interface-1.png)
 
+MENA countries dominate the beginning of the graph, indicating that their citizens happier, likely because they are richer and more developed.
 
 
 <!-- ------------------------------------------------------------------ -->
@@ -341,7 +342,7 @@ The results when we ran the queries showed there was a varying degree of ratios 
 Gabon - 39.300279159929 - 11113.8884680599
 Liberia - 40.3506749335596 - 374.333222192516
 ```
-Above it shows that while both countries have heavily invested into using resources to fund their respective economies, their GDP's are very far apart. This happens several other times in the data, but these two were the best example. Therefore there is no direct correlation between a countries resource rent percentage and GDP. After researching both the countries we found Gabon to be a relatively stable country and having no major conflicts in the past couple decades. However, this is much different than Liberia's history, especially in recent times. In the span of 14 years they've had two civil wars, with the first starting in 1989 and the second ending in 2003.
+Above it shows that while both countries have heavily invested into using resources to fund their respective economies, their GDP's are very far apart. This happens several other times in the data, but these two were the best example. Therefore there is no direct correlation between a countries resource rent percentage and GDP. After researching both the countries we found Gabon to be a relatively stable country and having no major conflicts in the past couple decades. However, this is much different than Liberia's history, especially in recent times. In the span of 14 years they've had two civil wars, with the first starting in 1989 and the second ending in 2003. This does not mean Gabon has the resource curse because their GDP is largely based on resources, but due to years of war and corrupt governments the country continues to struggle to reach economic prosperity. This is most likely the case with other countries such as Guinea and Zambia, both of which have problems with their governments.
 
 ###### Graphics
 
