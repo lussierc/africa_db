@@ -9,14 +9,9 @@ Our project looks into a variety of questions surrounding African development an
 ##### Motivation
 We were motivated to pursue this project for a number of reasons. For one, despite African countries gaining independence from their colonial masters in the mid-1900s and receiving financial aid, loans, and more, African countries have faced great problems in their development and with developing their economies to compete in the global market. We were motivated to try and see if we could try to solve some of these problems or at least find clues/correlations relating to these problems. Additionally, a few of our group members are economics minors taking classes relating to African Development, making them interested in learning more outside of that class.
 
-This project has real-world relevance in that it is looking at real data regarding Africa. With this, economists and development experts are trying to solve problems relating to Africa's poor development and economic patterns. This research could benefit others in this regard, such as the experts researching Africa everyday to try and solve problems. We feel that trying to answer the questions below could provide some valuable insights into what is stopping African economic development. With this, these questions could find correlations between different ideas to see if they have any impact on another. The correlations and results stemming from this research could provide valuable insights into these problems. Additionally, the casual observer who is interested in African economics could also be benefitted by this research as they could find out more about the topic.
-
-* Why did we choose this project?
-* How will this research benefit others?
+This project has real-world relevance in that it is looking at real data regarding Africa. With this, economists and development experts are trying to solve problems relating to Africa's poor development and economic patterns. This research could benefit others in this regard, such as the experts researching Africa everyday to try and solve problems. We feel that trying to answer the questions below could provide some valuable insights into what is stopping African economic development. With this, these questions could find correlations between different ideas to see if they have any impact on another. The correlations and results stemming from this research could provide valuable insights into these problems. Additionally, the casual observer who is interested in African economics could also be benefited by this research as they could find out more about the topic.
 
 ##### Background Information
-* Explanation of related works
-  * How are they relevant to our Project?
 
 There are a variety of related works that discuss Africa's slow development patterns and poor economic trajectories. For example, the source ["Why Has Africa Grown Slowly"](https://www.aeaweb.org/articles?id=10.1257/jep.13.3.3) touches upon a number of ideas surrounding Africa's slow growth over the last twentieth century, while discussing some of the issues African economies have faced. This source notes that while Africa's economic and development future looked bright in the 1960s, political deterioration stemming from the implementation of dictatorship and autocratic regimes hurt the economic trajectories of many African countries. With this, the source also notes that African countries seem to have much higher trade barriers and misaligned exchange rates than their global peers. Additionally, the authors Collier, Paul, and Gunning, note that one the many factors contributing to the poor and ever-changing economies of African countries is a heavy reliance on natural resources. This reliance often leads to unsustainable and unpredictable outcomes that comes with the market value of the resources on a global scale. This is part of the reason why for question 5, we are looking into the economics of countries with higher natural resource rents.
 
@@ -41,7 +36,7 @@ After this, the builder file sets the separator which will be used to separate t
 
 
 ###### User Interface
-We looked into a variety of different ways to create a user interface for our project. The user interface needed to allow users to interact with the database but not contain visible querying code. With this criteria in mind, we narrowed down our interface options to three different tools, Djano, Flask, or a command-line based Python interface. Eventually, we decided to create a Python command-line interface for a few reasons. For one, we felt that we had more experience in using Python with Sqlite3 for such a purpose which would make it easier and less time consuming to implement than the other options. Additionally, we felt that for the criteria required, a command-line interface would be very simple to use while still allowing the user to complete all necessary actions.
+We looked into a variety of different ways to create a user interface for our project. The user interface needed to allow users to interact with the database but not contain visible querying code. With this criteria in mind, we narrowed down our interface options to three different tools, Django, Flask, or a command-line based Python interface. Eventually, we decided to create a Python command-line interface for a few reasons. For one, we felt that we had more experience in using Python with Sqlite3 for such a purpose which would make it easier and less time consuming to implement than the other options. Additionally, we felt that for the criteria required, a command-line interface would be very simple to use while still allowing the user to complete all necessary actions.
 
 The command line interface allows the user to complete a number of tasks, by giving users a variety of different options with how to run the program. For instance, it allows the user to display all of the data from a table of their choosing, without forcing them to write a query and instead allowing them to just enter a table name. Additionally, there are features in place that allow the user to get the names of the tables in the database, a brief description of each, and the table schema. The user can also perform a query in a table of their choosing, using conditions that they specify. Additionally, users can also insert content into tables of their choosing and update/edit tables. Also, users can use a feature that will display the research questions for the project, the query used to solve them, and the query results.
 
@@ -64,10 +59,8 @@ This user interface, created using Python and the Sqlite3 package, allows the us
 #### Research Question 1
 Africa's Real GDP Growth rate seemed to steadily increase for a few decades, but then it took a downturn. When did this downturn occur and why?
 
-We asked this question because this question gives us some extra insight to how the economy is in Africa and how African development is being affected. African did take a downturn and we want to know why and this question helps us asses and shed some light on why. This question is relevant for a number of reasons. We first have to delve into Africa history a little to better understand the situation that has been in Africa for decades now. Using the websites and the information we found, we created tables and graphs to try and help answer this question. Africa's real GDP Growth rate did take a bit of a downturn. From using the graphs and tables we made, it seems that Africa's downturn happened around 2009. The downturn occured because of numerous reasons. The first reason we can start with is that Africa is plagued with wars. Ever since colonialism, Africa has had consistent terror and corruption in their continent. Colonialism was when European countries invaded Africa, took their land, and enslaved African people. This set Africa back a few decades. Towards the end of the 20th Century, African countries started to gain their independence but they were still at a disadvantage. Since the African countries had been ruled by European powers for so long, they didn't actually know how to take care of themselves and we still see this kind of thing in Africa today. This hurt Africa real bad. People who are not fit to rule stepped up and took rule over countries they weren't equipped in ruling. Rulers then became power hungry and would decide to not ever give up power. This obviously lead to lots of corruption in the continent and normal everyday citizens were really struck by this in a bad way. This lead to something known as the Arab Spring in the MENA region. After so many citizens in the MENA region in Africa faced low living standards while they saw their ruler live in luxury, they got very angry and rebelled against him. This happened in a few countries and a result of this were countries who felt like they could start over to become a better nation with a good standard of living for everyone and with a decent government. Another big thing in Africa that happened around this time was the lost decade. The lost decade was a time in Africa where really nothing positive came from the decade. Lots of wars were fought, many countries became plagued with debt, and citizens were living at an all time low of living standards. This decade hurt Africa a lot because they did not have a decade to give up. The tools we used were first the websites that we used to gather the data on Africa and second, the database we built. The database allowed us to search through a number of years to see the real GDP of some years. the query we used was select "2008", "2009","2010","2011","2012" from RealGDPGrowth and with this, we were able to see the years where the real GDP growth took a drop. This query certainly helped us get an answer and an explanation on why the rate took a drop.
-
 ##### Introduction
-Why are we asking it? Why is relevant?
+We asked this question because this question gives us some extra insight to how the economy is in Africa and how African development is being affected. African did take a downturn and we want to know why and this question helps us asses and shed some light on why. This question is relevant for a number of reasons. We first have to delve into Africa history a little to better understand the situation that has been in Africa for decades now. Using the websites and the information we found, we created tables and graphs to try and help answer this question.
 
 ##### Queries
 How did we answer it? What tools did we use? What data?
@@ -77,8 +70,8 @@ select "2008", "2009","2010","2011","2012" from RealGDPGrowth;
 ```
 
 ##### Results
-Results
-How we know results from query are correct
+
+Africa's real GDP Growth rate did take a bit of a downturn. From using the graphs and tables we made, it seems that Africa's downturn happened around 2010. The downturn occurred because of numerous reasons. The first reason we can start with is that Africa is plagued with wars. Ever since colonialism, Africa has had consistent terror and corruption in their continent. Colonialism was when European countries invaded Africa, took their land, and enslaved African people. This set Africa back a few decades. Towards the end of the 20th Century, African countries started to gain their independence but they were still at a disadvantage. Since the African countries had been ruled by European powers for so long, they didn't actually know how to take care of themselves and we still see this kind of thing in Africa today. This hurt Africa real bad. People who are not fit to rule stepped up and took rule over countries they weren't equipped in ruling. Rulers then became power hungry and would decide to not ever give up power. This obviously lead to lots of corruption in the continent and normal everyday citizens were really struck by this in a bad way. This lead to something known as the Arab Spring in the MENA region. After so many citizens in the MENA region in Africa faced low living standards while they saw their ruler live in luxury, they got very angry and rebelled against him. This happened in a few countries and a result of this were countries who felt like they could start over to become a better nation with a good standard of living for everyone and with a decent government. Another big thing in Africa that happened around this time was the lost decade. The lost decade was a time in Africa where really nothing positive came from the decade. Lots of wars were fought, many countries became plagued with debt, and citizens were living at an all time low of living standards. This decade hurt Africa a lot because they did not have a decade to give up. The tools we used were first the websites that we used to gather the data on Africa and second, the database we built. The database allowed us to search through a number of years to see the real GDP of some years. the query we used was select "2008", "2009","2010","2011","2012" from RealGDPGrowth and with this, we were able to see the years where the real GDP growth took a drop. This query certainly helped us get an answer and an explanation on why the rate took a drop.
 
 ###### Graphics
 Graphics for results.
@@ -87,11 +80,11 @@ Graphics for results.
 #### Research Question 2
 Is there a correlation between GDP per capita and inequality rankings (income inequality)?
 
-#### Introduction
+##### Introduction
 
 It can be reasoned that wealthier countries should have a lower inequality gap since there is more wealth to be distributed. However, this may not always be the case due to various reasons. For example, the style of government could facilitate mass hoarding of wealth by the upper class, which tends to happen in dictatorships. The goal of this question find a correlation between inequality and a countries GDP.
 
-#### Queries
+##### Queries
 This question used data from the HPI table to get information regarding inequality. It also used data from the DevIndicators table in order to look at the GDP Per Capita for African countries.
 
 The queries used in this question were:
@@ -104,6 +97,42 @@ SELECT "Time", "Country Name", "GDP per capita (current US$) [NY.GDP.PCAP.CD]" f
 The first query used to answer this question gets the country name and inequality percentage ranking from the HPI table where the region is either Sub-Saharan Africa or the MENA region so that only African countries are outputted. The second query selects the year ("Time"), Country Name, and GDP Per Capita from the DevIndicators table. Additionally, this query uses "OR" statements to find and display data from African countries only.
 
 ##### Results
+```
+Mauritius|17%
+Ethiopia|36%
+Zambia|41%
+Kenya|38%
+Mozambique|43%
+Comoros|36%
+Nigeria|44%
+Liberia|38%
+Tanzania|33%
+Malawi|45%
+Zimbabwe|37%
+Senegal|33%
+Namibia|26%
+Ghana|38%
+Rwanda|37%
+Uganda|41%
+Republic of Congo|40%
+Mauritania|37%
+Burkina Faso|43%
+Gabon|36%
+Niger|40%
+Cameroon|47%
+Lesotho|42%
+Botswana|28%
+Djibouti|42%
+South Africa|33%
+Guinea|42%
+Burundi|48%
+Swaziland|41%
+Sierra Leone|50%
+Cote d'Ivoire|45%
+Benin|44%
+Togo|43%
+Chad|51%
+```
 
 ###### Graphics
 
@@ -113,7 +142,7 @@ Is there a correlation between living standards (HPI) and GDP per capita?
 
 ##### Introduction
 
-In most cases wealthier countries are able provide a better standard of living for their citizens. For example, in the U.S. inequality tends to be high between different economic classes, however this tends to negligible in many cases because the living standard for almost any American is higher than that of of a third world country. In some cases the living standard for the poorest segment of Americans could be better than that of the upper class of other poorer nations. For a continent like Africa,
+In most cases wealthier countries are able provide a better standard of living for their citizens. For example, in the U.S. inequality tends to be high between different economic classes, however this tends to negligible in many cases because the living standard for almost any American is higher than that of of a third world country. In some cases the living standard for the poorest segment of Americans could be better than that of the upper class of other poorer nations. For a continent like Africa, where most of the countries are third world, we expected to see better standards of living for countries who have a higher GDP per capita because of the greater wealth circulating.
 
 ##### Queries
 
@@ -161,6 +190,34 @@ select * from DevIndicators WHERE "Time" = 2011;
 ```
 
 ##### Results
+```
+Angola|44.5142476068548 5318.0403682016
+Benin|4.76591951929875 801.644281225183
+Botswana|3.61844801327403 8532.61722168124
+Central African Republic|9.35334782277437 489.146364001488
+Cote d'Ivoire|8.80536500677469 1194.55859933097
+Egypt, Arab Rep.|12.0508676470673 2780.94924552693
+Ethiopia|17.974887804527 356.967287240092
+Gabon|39.300279159929 11113.8884680599
+Guinea|21.6059540351796 497.90485542705
+Gambia, The|7.01314792175681 505.760570130748
+Guinea-Bissau|13.2552539075768 625.549056362593
+Kenya|3.32036193476484 808.000571785527
+Liberia|40.3506749335596 374.333222192516
+Lesotho|3.59849853015823 105.91323856084
+Madagascar|7.39439042593381 465.011424822866
+Mali|13.1342707005088 683.511241908842
+Mozambique|9.77201852840251 533.313665208799
+Niger|10.784940994768 374.445406345683
+Nigeria|18.1962733026269 1501.72158251684
+Rwanda|6.96956335829798 582.555660780284
+Sudan|21.5884851590529 1866.44473303669
+Senegal|5.01949916868631 1119.35728769979
+Uganda|12.6504981990651 487.105498050193
+South Africa|8.63690139269013 8070.03209040967
+Zambia|21.8108034497212 1425.31379369828
+Zimbabwe|10.9992668914335 757.089017888128
+```
 
 
 ###### Graphics
