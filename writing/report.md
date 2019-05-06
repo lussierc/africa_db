@@ -278,14 +278,17 @@ Here are a portion of our results:
 93|Comoros|Sub Saharan Africa|62.6|4.0|36%|1.0|23.1
 94|Yemen|Middle East and North Africa|63.3|4.1|39%|1.0|22.8
 95|Nigeria|Sub Saharan Africa|52.1|5.5|44%|1.2|22.2
-96|Liberia|Sub Saharan Africa|60.2|4.4|38%|1.2|22.2
-97|Tanzania|Sub Saharan Africa|63.5|4.0|33%|1.3|22.1
-98|Malawi|Sub Saharan Africa|60.1|4.3|45%|0.8|22.1
 ```
+
+As discussed before, MENA countries seem to take up more spots at the top of the list than SSA countries, indicating their citizens are more happy. The graphs/plots below indicate similar results.
 
 <!-- Based on the results from our query, Sub Sahara Africa seems to be overall happier than the Middle East and North Africa. Looking at Africa's history, this does make sense. The Sub Saharan region in Africa overall have worse socio-economic indicators than the Middle East and North Africa region but there are not quite as many revolts within in country. A big thing that struck the Middle East and North African region was the Arab Spring. The Arab Spring was a string of revolts lead by the residents of a country. This was a big thing in the Middle East and North Africa region so it makes sense why the residents of the Middle East and North African region would have an overall less happy score than the residents of the Sub Sahara region. -->
 
-##### Graphics
+###### Graphics
+![HPI Region Graph](graphics/HPI-Region-Plot.png)
+![User interface running with option 1.](graphics/user-interface-1.png)
+
+
 
 <!-- ------------------------------------------------------------------ -->
 #### Research Question 5
@@ -305,7 +308,7 @@ select * from DevIndicators WHERE "Time" = 2011;
 
 ##### Results
 ```
-Country Name - Resource Rent (& of GDP) - GDP Growth Rate
+Country Name - Resource Rent (& of GDP) - GDP Per Capita
 Angola - 44.5142476068548 - 5318.0403682016
 Benin - 4.76591951929875 - 801.644281225183
 Botswana - 3.61844801327403 - 8532.61722168124
@@ -333,7 +336,12 @@ South Africa - 8.63690139269013 - 8070.03209040967
 Zambia - 21.8108034497212 - 1425.31379369828
 Zimbabwe - 10.9992668914335 - 757.089017888128
 ```
-
+The results when we ran the queries showed there was a varying degree of ratios between resource rent and GDP. For example, take the countries Gabon and Liberia. Both of these nations have a high resource rent percentage, yet their GDP's are vastly different.
+```
+Gabon - 39.300279159929 - 11113.8884680599
+Liberia - 40.3506749335596 - 374.333222192516
+```
+Above it shows that while both countries have heavily invested into using resources to fund their respective economies, their GDP's are very far apart. This happens several other times in the data, but these two were the best example. Therefore there is no direct correlation between a countries resource rent percentage and GDP. After researching both the countries we found Gabon to be a relatively stable country and having no major conflicts in the past couple decades. However, this is much different than Liberia's history, especially in recent times. In the span of 14 years they've had two civil wars, with the first starting in 1989 and the second ending in 2003.
 
 ###### Graphics
 
