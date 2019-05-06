@@ -30,6 +30,19 @@ We took a variety of steps to build our database system. We began by acquiring d
 After this, the builder file sets the separator which will be used to separate the data being read in by the Sqlite3 database. In this case, the separator is set as a comma, `,`, because the database will be reading in CSV files where the values are separated by commas. The builder file then contains code that will read the CSV files into the database, putting them in their specific tables, so that they can be accessed for work with queries and other database-related tasks.
 
 ###### Tables & Schema
+Inside of our Sqlite3 database system, we created 4 tables, detailed below:
+- The "HPI" Table: This table contains data from the [Happy Planet Index](http://happyplanetindex.org). The Happy Planet Index is an index that takes in many factors and determines how happy a country must be, based on how well their country is doing. Some of the factors that the Happy Planet Index use are well-being, life expectancy, inequality of outcomes, and ecological footprint. For well-being, the Happy Planet Index took data from the Gallup World poll and used it to determine the well-being of residents' life on a scale from zero to ten. For life expectancy, the Happy Planet index used data collected from the United Nations and life expectancy is the average number of years a person is expected to live in each country. For inequality of outcomes, the Happy Planet index just took the data from well-being and life expectancy and just expressed those numbers as percentages. Lastly, for ecological footprint, The Happy Planet index used the Global Footprint Network and it is the average impact that each resident of a country places on the environment.
+  - [Happy Planet Index Website.](http://happyplanetindex.org)
+- The "DevIndicators" Table: Contains a number of development indicators such as the GDP Growth (annual %) and GDP per capita for a number of African countries, spanning the years 2000-2012. This gives us an insight into the standards of living for these countries.
+  - The data for this table can be found [here](https://databank.worldbank.org/data/source/africa-development-indicators#).
+- The "RealGDPGrowth" Table: Contains the Real GDP Growth rate for Africa over the span of years from 1980-2024.
+  - [Click here for the data source for IMF - Real GDP Growth in Africa.](https://www.imf.org/external/datamapper/NGDP_RPCH@WEO/OEMDC/ADVEC/WEOWORLD)
+- The "Resources" Table: Contains data about the Natural Resource Rents (as a % of GDP) for African countries. This indicates what percentage of a country's GDP is from natural resources.
+  - [Natural Resource Rents (% of GDP) source.](https://data.worldbank.org/indicator/ny.gdp.totl.rt.zs)
+
+All of these tables contain important content that was useful for answering the project questions. More information about the importance of each table in terms of what questions it was used for will be provided with the writing for each question.
+
+SCHEMA
 
 ![SQLite3 Database Terminal](graphics/current-database.png)
 
@@ -60,18 +73,26 @@ This user interface, created using Python and the Sqlite3 package, allows the us
 Africa's Real GDP Growth rate seemed to steadily increase for a few decades, but then it took a downturn. When did this downturn occur and why?
 
 ##### Introduction
-We asked this question because this question gives us some extra insight to how the economy is in Africa and how African development is being affected. African did take a downturn and we want to know why and this question helps us asses and shed some light on why. This question is relevant for a number of reasons. We first have to delve into Africa history a little to better understand the situation that has been in Africa for decades now. Using the websites and the information we found, we created tables and graphs to try and help answer this question.
+We asked this question because this question gives us some extra insight to how the economy is in Africa and how African development is being affected. African did take a downturn and we want to know why and this question helps us assess  and shed some light on why. This question is relevant for a number of reasons. We first have to delve into Africa history a little to better understand the situation that has been in Africa for decades now. Using the websites and the information we found, we created tables and graphs to try and help answer this question.
 
 ##### Queries
-How did we answer it? What tools did we use? What data?
-The query used in the database was:
+To determine when Africa' Real GDP Growth rate took a sudden downturn, we used data from our RealGDPGrowth table as it contained information regarding Africa's Real GDP Growth rate from 1980 to 2024 (it is predicted for future years). With this our original query was simply:
+```
+SELECT * FROM RealGDPGrowth;
+```
+
+This simple query allowed us to see trends and narrow down the more specific years to look for where this downturn. With this we created our final query with these narrowed down years, from 2008-2012.
+
+The finalized query used in the database was:
 ```
 select "2008", "2009","2010","2011","2012" from RealGDPGrowth;
 ```
 
 ##### Results
 
-Africa's real GDP Growth rate did take a bit of a downturn. From using the graphs and tables we made, it seems that Africa's downturn happened around 2010. The downturn occurred because of numerous reasons. The first reason we can start with is that Africa is plagued with wars. Ever since colonialism, Africa has had consistent terror and corruption in their continent. Colonialism was when European countries invaded Africa, took their land, and enslaved African people. This set Africa back a few decades. Towards the end of the 20th Century, African countries started to gain their independence but they were still at a disadvantage. Since the African countries had been ruled by European powers for so long, they didn't actually know how to take care of themselves and we still see this kind of thing in Africa today. This hurt Africa real bad. People who are not fit to rule stepped up and took rule over countries they weren't equipped in ruling. Rulers then became power hungry and would decide to not ever give up power. This obviously lead to lots of corruption in the continent and normal everyday citizens were really struck by this in a bad way. This lead to something known as the Arab Spring in the MENA region. After so many citizens in the MENA region in Africa faced low living standards while they saw their ruler live in luxury, they got very angry and rebelled against him. This happened in a few countries and a result of this were countries who felt like they could start over to become a better nation with a good standard of living for everyone and with a decent government. Another big thing in Africa that happened around this time was the lost decade. The lost decade was a time in Africa where really nothing positive came from the decade. Lots of wars were fought, many countries became plagued with debt, and citizens were living at an all time low of living standards. This decade hurt Africa a lot because they did not have a decade to give up. The tools we used were first the websites that we used to gather the data on Africa and second, the database we built. The database allowed us to search through a number of years to see the real GDP of some years. the query we used was select "2008", "2009","2010","2011","2012" from RealGDPGrowth and with this, we were able to see the years where the real GDP growth took a drop. This query certainly helped us get an answer and an explanation on why the rate took a drop.
+Africa's real GDP Growth rate did take a bit of a downturn. From using the graphs and tables we made, it seems that Africa's downturn happened around 2010. Using our knowledge from previous courses and online information we found that the downturn occurred because of numerous reasons. The first reason we can start with is that Africa is plagued with wars. Ever since colonialism, Africa has had consistent terror and corruption in their continent. Colonialism was when European countries invaded Africa, took their land, and enslaved African people. This set Africa back a few decades. Towards the end of the 20th Century, African countries started to gain their independence but they were still at a disadvantage. Since the African countries had been ruled by European powers for so long, they didn't actually know how to take care of themselves and we still see this kind of thing in Africa today. This hurt Africa real bad. People who are not fit to rule stepped up and took rule over countries they weren't equipped in ruling. Rulers then became power hungry and would decide to not ever give up power. This obviously lead to lots of corruption in the continent and normal everyday citizens were really struck by this in a bad way.
+
+This lead to something known as the Arab Spring in the MENA region. After so many citizens in the MENA region in Africa faced low living standards while they saw their ruler live in luxury, they got very angry and rebelled against him. This happened in a few countries and a result of this were countries who felt like they could start over to become a better nation with a good standard of living for everyone and with a decent government. Another big thing in Africa that happened around this time was the lost decade. The tools we used were first the websites that we used to gather the data on Africa and second, the database we built. The database allowed us to search through a number of years to see the real GDP of some years. the query we used was select "2008", "2009","2010","2011","2012" from RealGDPGrowth and with this, we were able to see the years where the real GDP growth took a drop. This query certainly helped us get an answer and an explanation on why the rate took a drop.
 
 ###### Graphics
 Graphics for results.
@@ -160,18 +181,48 @@ select "Time", "Country Name", "GDP per capita (current US$) [NY.GDP.PCAP.CD]" f
 #### Research Question 4
 Are countries that live in a specific region overall happier than countries that don't live in that region? (i.e. Sub-Saharan Africa and MENA)
 
-We asked this question because we wanted to know if living in a certain region in Africa has any correlation to happiness. In order to live a good life, we believe everyone has to have a level of happiness and we believe that this question will shed some light on whether or not living in a specific region in Africa has any correlation at all to happiness and if so, which region is overall happier. This is relevant because it is tied within our theme of African development and growth. Overall, we our goal is to find some patterns in the data we see with Africa and try and figure out if those patterns will have any affect on what the future may hold. To investigate this issue we mainly used the Happy Planet Index for the data for coming up with finding out the answer to this question. The Happy Planet Index is an index that takes in many factors and determines how happy a country must be, based on how well their country is doing. Some of the factors that the Happy Planet Index use are well-being, life expectancy, inequality of outcomes, and ecological footprint. For well-being, the Happy Planet Index took data from the Gallup World poll and used it to determine the well-being of residents' life on a scale from zero to ten. For life expectancy, the Happy Planet index used data collected from the United Nations and life expectancy is the average number of years a person is expected to live in each country. For inequality of outcomes, the Happy Planet index just took the data from well-being and life expectancy and jus expressed those numbers as percentages. Lastly, for ecological footprint, The Happy Planet index used the Global Footprint Network and it is the average impact that each resident of a country places on the environment. The query we used to find out the answer to this question is select * from HPI where region = "Sub Saharan Africa" OR "Middle East and North Africa. We used this to get the HPI scores of each region and try and figure out which region is overall happier. Based on the results from our query, Sub Sahara Africa seems to be overall happier than the Middle East and North Africa. Looking at Africa's history, this does make sense. The Sub Saharan region in Africa overall have worse socio-economic indicators than the Middle East and North Africa region but there are not quite as many revolts within in country. A big thing that struck the Middle East and North African region was the Arab Spring. The Arab Spring was a string of revolts lead by the residents of a country. This was a big thing in the Middle East and North Africa region so it makes sense why the residents of the Middle East and North African region would have an overall less happy score than the residents of the Sub Sahara region.
-
 ##### Introduction
 
-##### Queries
+We asked this question because we wanted to know if living in a certain region in Africa has any correlation to happiness. In order to live a good life, we believe everyone has to have a level of happiness and we believe that this question will shed some light on whether or not living in a specific region in Africa has any correlation at all to happiness and if so, which region is overall happier. This is relevant because it is tied within our theme of African development and growth. Overall, we our goal is to find some patterns in the data we see with Africa and try and figure out if those patterns will have any affect on what the future may hold.
 
+To investigate this issue we used the HPI table containing Happy Planet Index for the data for coming up with finding out the answer to this question. This is because the Happy Planet Index takes into a number of factors (detailed earlier on in this report) to calculate the Happy Planet Index, representing how happy the citizens of specific countries are. This made the HPI table the perfect choice to answer this question.
+
+##### Queries
 The query used in the database was:
 ```
-select * from HPI where region = "Sub Saharan Africa" OR "Middle East and North Africa";
+select * from HPI where region = "Sub Saharan Africa" OR region = "Middle East and North Africa";
 ```
 
+We used this to get the HPI scores of each region and try and figure out which region is overall happier.
+
 ##### Results
+Based on the results from our query, the MENA (Middle East and North Africa) region seems to be happier than the SSA (Sub-Saharan Africa). The top of the list in terms of HPI rankings were dominated by MENA countries when comparing MENA and SSA countries. This makes sense because MENA countries have been found to be better off economically and are often more developed than SSA countries.
+
+Here are a portion of our results:
+```
+22|Palestine|Middle East and North Africa|72.6|4.6|24%|1.2|34.5
+30|Algeria|Middle East and North Africa|74.3|5.6|24%|2.1|33.3
+33|Morocco|Middle East and North Africa|73.4|5.0|25%|1.7|32.7
+54|Israel|Middle East and North Africa|81.9|7.1|8%|6.2|28.8
+63|Mauritius|Sub Saharan Africa|74.0|5.5|17%|3.5|27.4
+66|Ethiopia|Sub Saharan Africa|62.8|4.6|36%|1.0|26.7
+67|Iraq|Middle East and North Africa|69.0|4.7|27%|1.9|26.5
+68|Turkey|Middle East and North Africa|74.7|5.3|19%|3.3|26.4
+71|Tunisia|Middle East and North Africa|74.6|4.5|22%|2.3|26.2
+77|Zambia|Sub Saharan Africa|58.4|5.0|41%|1.0|25.2
+83|Kenya|Sub Saharan Africa|60.3|4.5|38%|1.0|24.2
+84|Iran|Middle East and North Africa|74.8|4.6|23%|2.8|24.0
+86|Egypt|Middle East and North Africa|70.7|4.2|23%|2.2|23.8
+88|Mozambique|Sub Saharan Africa|54.3|5.0|43%|0.9|23.7
+93|Comoros|Sub Saharan Africa|62.6|4.0|36%|1.0|23.1
+94|Yemen|Middle East and North Africa|63.3|4.1|39%|1.0|22.8
+95|Nigeria|Sub Saharan Africa|52.1|5.5|44%|1.2|22.2
+96|Liberia|Sub Saharan Africa|60.2|4.4|38%|1.2|22.2
+97|Tanzania|Sub Saharan Africa|63.5|4.0|33%|1.3|22.1
+98|Malawi|Sub Saharan Africa|60.1|4.3|45%|0.8|22.1
+```
+
+<!-- Based on the results from our query, Sub Sahara Africa seems to be overall happier than the Middle East and North Africa. Looking at Africa's history, this does make sense. The Sub Saharan region in Africa overall have worse socio-economic indicators than the Middle East and North Africa region but there are not quite as many revolts within in country. A big thing that struck the Middle East and North African region was the Arab Spring. The Arab Spring was a string of revolts lead by the residents of a country. This was a big thing in the Middle East and North Africa region so it makes sense why the residents of the Middle East and North African region would have an overall less happy score than the residents of the Sub Sahara region. -->
 
 ##### Graphics
 
