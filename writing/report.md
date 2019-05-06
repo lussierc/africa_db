@@ -160,7 +160,7 @@ The above results are visualized in a more formalized and easier to understand w
 
 Africa's real GDP Growth rate did take a bit of a downturn. From using the graphs and tables we made, it seems that Africa's downturn happened around 2010. Using our knowledge from previous courses and online information we found that the downturn occurred because of numerous reasons. The first reason we can start with is that Africa is plagued with wars. Ever since colonialism, Africa has had consistent terror and corruption in their continent. Colonialism was when European countries invaded Africa, took their land, and enslaved African people. This set Africa back a few decades. Towards the end of the 20th Century, African countries started to gain their independence but they were still at a disadvantage. Since the African countries had been ruled by European powers for so long, they didn't actually know how to take care of themselves and we still see this kind of thing in Africa today. This hurt Africa real bad. People who are not fit to rule stepped up and took rule over countries they weren't equipped in ruling. Rulers then became power hungry and would decide to not ever give up power. This obviously lead to lots of corruption in the continent and normal everyday citizens were really struck by this in a bad way.
 
-This lead to something known as the Arab Spring in the MENA region. After so many citizens in the MENA region in Africa faced low living standards while they saw their ruler live in luxury, they got very angry and rebelled against him. This happened in a few countries and a result of this were countries who felt like they could start over to become a better nation with a good standard of living for everyone and with a decent government. Another big thing in Africa that happened around this time was the lost decade. The tools we used were first the websites that we used to gather the data on Africa and second, the database we built. The database allowed us to search through a number of years to see the real GDP of some years. the query we used was select "2008", "2009","2010","2011","2012" from RealGDPGrowth and with this, we were able to see the years where the real GDP growth took a drop. This query certainly helped us get an answer and an explanation on why the rate took a drop.
+This lead to something known as the Arab Spring in the MENA region. After so many citizens in the MENA region in Africa faced low living standards while they saw their ruler live in luxury, they got very angry and rebelled against him. This happened in a few countries and a result of this were countries who felt like they could start over to become a better nation with a good standard of living for everyone and with a decent government. Another big thing in Africa that happened around this time was the lost decade. The tools we used were first the websites that we used to gather the data on Africa and second, the database we built. The database allowed us to search through a number of years to see the real GDP of some years. the query we used was select "2008", "2009","2010","2011","2012" from RealGDPGrowth and with this, we were able to see the years where the real GDP growth took a drop. We noticed that while there were low GDP growth rates in Africa during the years 2008 and 2012, these were likely abnormalities due to Africa's unpredictable economic sector. However, 2010 was the lowest GDP growth rate in a long time and this is because of the Arab Spring in the MENA region. This query certainly helped us get an answer and an explanation on why the rate took a drop.
 
 ###### Graphics
 Visualized graphics for the Real GDP Growth rate in Africa from 2008-2012:
@@ -187,7 +187,7 @@ SELECT "Time", "Country Name", "GDP per capita (current US$) [NY.GDP.PCAP.CD]" f
 The first query used to answer this question gets the country name and inequality percentage ranking from the HPI table where the region is either Sub-Saharan Africa or the MENA region so that only African countries are outputted. The second query selects the year ("Time"), Country Name, and GDP Per Capita from the DevIndicators table, which is being used explicitly because it contains GDP Per Capita information. Additionally, this query uses "OR" statements to find and display data from African countries only.
 
 ##### Results
-Here are just a portion of our results, which combines the content from both the above queries:
+Here are just a portion of our results, which combines the content from both of the above queries:
 ```
 Country - Inequality % - GDP Per Capita
 Mauritius - 17% - 533.313655
@@ -210,7 +210,7 @@ Inequality vs GDP Per Capita Scatter Plot:
 As mentioned previously, it seems that countries with a high GDP Per Capita sit at around a 25-35% Inequality of Outcomes. Additionally, it seems that country with lower GDP Per Capita's have a higher inequality percentage. This is indicated by the trend line that is displayed in the above graphic.
 <!-- ------------------------------------------------------------------ -->
 #### Research Question 3
-Is there a correlation between living standards (HPI) and GDP per capita?
+Is there a correlation between living standards/citizen happiness (HPI) and GDP per capita?
 
 ##### Introduction
 
@@ -225,8 +225,13 @@ SELECT Country, HPI from HPI WHERE region = "Sub Saharan Africa" OR "Middle East
 select "Time", "Country Name", "GDP per capita (current US$) [NY.GDP.PCAP.CD]" from DevIndicators;
 ```
 ##### Results
+After using these queries to gather our results and then organizing them, it unfortunately seems there is no real correlation between HPI and GDP Per Capita. This can be better seen in the plot that is displayed in the `Graphics` section below. It simply seems that there is no correlation.
+
+This could be because HPI doesn't really take into account any economic data in the calculation of its index. This means that HPI and GDP Per Capita don't really relate to each other all that much, so it makes sense that there would be no noticeable or strong correlation between the two.
 
 ###### Graphics
+Graphic showing HDI vs GDP Per Capita in Africa in 2011:
+![HPI vs GDP Per Capita](graphics/hpi-vs-gdppercap.png)
 
 <!-- ------------------------------------------------------------------ -->
 #### Research Question 4
@@ -275,7 +280,7 @@ As discussed before, MENA countries seem to take up more spots at the top of the
 <!-- Based on the results from our query, Sub Sahara Africa seems to be overall happier than the Middle East and North Africa. Looking at Africa's history, this does make sense. The Sub Saharan region in Africa overall have worse socio-economic indicators than the Middle East and North Africa region but there are not quite as many revolts within in country. A big thing that struck the Middle East and North African region was the Arab Spring. The Arab Spring was a string of revolts lead by the residents of a country. This was a big thing in the Middle East and North Africa region so it makes sense why the residents of the Middle East and North African region would have an overall less happy score than the residents of the Sub Sahara region. -->
 
 ###### Graphics
-Happy Planet Index for African countries in MENA and SSA regions.
+Happy Planet Index (2016) for African countries in MENA and SSA regions:
 ![HPI Region Graph](graphics/HPI-Region-Plot.png)
 
 MENA countries dominate the beginning of the graph, indicating that their citizens happier, likely because they are richer and more developed.
@@ -335,8 +340,9 @@ Liberia - 40.3506749335596 - 374.333222192516
 Above it shows that while both countries have heavily invested into using resources to fund their respective economies, their GDP's are very far apart. This happens several other times in the data, but these two were the best example. Therefore there is no direct correlation between a countries resource rent percentage and GDP. After researching both the countries we found Gabon to be a relatively stable country and having no major conflicts in the past couple decades. However, this is much different than Liberia's history, especially in recent times. In the span of 14 years they've had two civil wars, with the first starting in 1989 and the second ending in 2003. This does not mean Gabon has the resource curse because their GDP is largely based on resources, but due to years of war and corrupt governments the country continues to struggle to reach economic prosperity. This is most likely the case with other countries such as Guinea and Zambia, both of which have problems with their governments.
 
 ###### Graphics
+Graphic displaying Resource Rent % of GDP versus GDP Per Capita in 2011 for African countries:
 ![Resource Rent % of GDP vs GDP Per Capita](graphics/Resource_GDP.png)
 <!-- ------------------------------------------------------------------ -->
 #### Concluding Remarks
 
-Throughout this project we have explored various regions in Africa and the data on their economies to understand why Africa is lagging behind other nations in terms of economic output and growth. From our research we have concluded there are a number of wide ranging factors that have slowed down the most of continent. These factors include, war,
+Throughout this project we have explored various regions in Africa and the data on their economies to understand why Africa is lagging behind other nations in terms of economic output and growth. From our research we have concluded there are a number of wide ranging factors that have slowed down the most of continent. These factors include, war, government corruption, inhospitable areas, lack of technological advancements, and outside interference by other nations. In addition, different parts of the country tend to do better than others, most notably countries in non-Saharan regions. This is most likely due to arable land, which makes famines less likely and resource competition much less fierce between competing groups. In summation, using our SQLite3 database, data from the internet, and research articles, we found a number of driving factors that have answered why Africa continues to experienced slow economic growth, while the rest of the world advances at the fastest rate it ever has in human history.
