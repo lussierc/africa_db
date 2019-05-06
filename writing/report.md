@@ -134,7 +134,7 @@ This user interface, created using Python and the Sqlite3 package, allows the us
 Africa's Real GDP Growth rate seemed to steadily increase for a few decades, but then it took a downturn. When did this downturn occur and why?
 
 ##### Introduction
-We asked this question because this question gives us some extra insight to how the economy is in Africa and how African development is being affected. African did take a downturn and we want to know why and this question helps us assess  and shed some light on why. This question is relevant for a number of reasons. We first have to delve into Africa history a little to better understand the situation that has been in Africa for decades now. Using the websites and the information we found, we created tables and graphs to try and help answer this question.
+We asked this question because it gives us some extra insight to how the economy is in Africa and how African development is being affected. African did take a downturn and we want to know why and this question helps us assess  and shed some light on why. This question is relevant for a number of reasons. We first have to delve into Africa history a little to better understand the situation that has been in Africa for decades now. Using the websites and the information we found, we created tables and graphs to try and help answer this question.
 
 ##### Queries
 To determine when Africa' Real GDP Growth rate took a sudden downturn, we used data from our RealGDPGrowth table as it contained information regarding Africa's Real GDP Growth rate from 1980 to 2024 (it is predicted for future years). With this our original query was simply:
@@ -151,12 +151,20 @@ select "2008", "2009","2010","2011","2012" from RealGDPGrowth;
 
 ##### Results
 
+The results of the above query are as follows:
+```
+3.2|5.9|3|6.8|3.7
+```
+
+The above results are visualized in a more formalized and easier to understand way in the `Graphics` section for this question below.
+
 Africa's real GDP Growth rate did take a bit of a downturn. From using the graphs and tables we made, it seems that Africa's downturn happened around 2010. Using our knowledge from previous courses and online information we found that the downturn occurred because of numerous reasons. The first reason we can start with is that Africa is plagued with wars. Ever since colonialism, Africa has had consistent terror and corruption in their continent. Colonialism was when European countries invaded Africa, took their land, and enslaved African people. This set Africa back a few decades. Towards the end of the 20th Century, African countries started to gain their independence but they were still at a disadvantage. Since the African countries had been ruled by European powers for so long, they didn't actually know how to take care of themselves and we still see this kind of thing in Africa today. This hurt Africa real bad. People who are not fit to rule stepped up and took rule over countries they weren't equipped in ruling. Rulers then became power hungry and would decide to not ever give up power. This obviously lead to lots of corruption in the continent and normal everyday citizens were really struck by this in a bad way.
 
 This lead to something known as the Arab Spring in the MENA region. After so many citizens in the MENA region in Africa faced low living standards while they saw their ruler live in luxury, they got very angry and rebelled against him. This happened in a few countries and a result of this were countries who felt like they could start over to become a better nation with a good standard of living for everyone and with a decent government. Another big thing in Africa that happened around this time was the lost decade. The tools we used were first the websites that we used to gather the data on Africa and second, the database we built. The database allowed us to search through a number of years to see the real GDP of some years. the query we used was select "2008", "2009","2010","2011","2012" from RealGDPGrowth and with this, we were able to see the years where the real GDP growth took a drop. This query certainly helped us get an answer and an explanation on why the rate took a drop.
 
 ###### Graphics
-Graphics for results.
+Visualized graphics for the Real GDP Growth rate in Africa from 2008-2012:
+![Visualized graphics for the Real GDP Growth rate in Africa from 2008-2012.](graphics/real-gdp-years.png)
 
 <!-- ------------------------------------------------------------------ -->
 #### Research Question 2
@@ -176,7 +184,7 @@ SELECT Country, Inequality from HPI WHERE region = "Sub Saharan Africa" OR "Midd
 SELECT "Time", "Country Name", "GDP per capita (current US$) [NY.GDP.PCAP.CD]" from DevIndicators WHERE "Country Name" = "Mauritius" OR "Country Name" = "Ethiopia" OR "Country Name" = "Zambia" OR "Country Name" = "Kenya" OR "Country Name" = "Mozambique" OR "Country Name" = "Comoros" OR "Country Name" = "Nigeria" OR "Country Name" = "Liberia" OR "Country Name" = "Tanzania" OR "Country Name" = "Malawi" OR "Country Name" = "Zimbabwe" OR "Country Name" = "Senegal" OR "Country Name" = "Namibia" OR "Country Name" = "Ghana" OR "Country Name" = "Rwanda" OR "Country Name" = "Uganda" OR "Country Name" = "Republic of Congo" OR "Country Name" = "Mauritania" OR "Country Name" = "Burkina Faso" OR "Country Name" = "Gabon" OR "Country Name" = "Niger" OR "Country Name" = "Cameroon" OR "Country Name" = "Lesotho" OR "Country Name" = "Botswana" OR "Country Name" = "Djibouti" OR "Country Name" = "South Africa" OR "Country Name" = "Guinea" OR "Country Name" = "Burundi" OR "Country Name" = "Swaziland" OR "Country Name" = "Sierra Leone" OR "Country Name" = "Cote d'Ivoire" OR "Country Name" = "Benin" OR "Country Name" = "Togo" OR "Country Name" = "Chad";
 ```
 
-The first query used to answer this question gets the country name and inequality percentage ranking from the HPI table where the region is either Sub-Saharan Africa or the MENA region so that only African countries are outputted. The second query selects the year ("Time"), Country Name, and GDP Per Capita from the DevIndicators table. Additionally, this query uses "OR" statements to find and display data from African countries only.
+The first query used to answer this question gets the country name and inequality percentage ranking from the HPI table where the region is either Sub-Saharan Africa or the MENA region so that only African countries are outputted. The second query selects the year ("Time"), Country Name, and GDP Per Capita from the DevIndicators table, which is being used explicitly because it contains GDP Per Capita information. Additionally, this query uses "OR" statements to find and display data from African countries only.
 
 ##### Results
 Here are just a portion of our results, which combines the content from both the above queries:
@@ -191,16 +199,22 @@ Comoros - 36% - 809.5740625
 Nigeria - 44% - 1501.721583
 ```
 
-These results indicate that there might be a slight correlation between the Inequality % of a country and its GDP Per Capita.
+These results indicate that there might be a slight correlation between the Inequality % of a country and its GDP Per Capita. It seems that the countries with the highest GDP Per Capita's have around a 25-35% Inequality of Outcomes percentage. This is in the middle of the pack for our data. With this, it seems that as the inequality of outcomes percent increases, the African countries have a lower GDP per capita. The graphic in the section below better portrays this possible correlation.
+
+This correlation seems to be that countries with lower GDP Per Capita amounts have higher inequality of outcomes percentages. This is likely because countries with lower GDP Per Capita countries are often poorer, but with a select group of rich people, contributing to a high inequality of outcomes percentage. This is likely in part because of corruption in many poor and underdeveloped countries where "crony capitalism" is prevalent and where those who are in power use the monetary resources at their disposal to the advantage of themselves and their allies.
+
 ###### Graphics
+Inequality vs GDP Per Capita Scatter Plot:
 ![Inequality vs GDP Per Capita Plot](graphics/Inequality-Plot.png)
+
+As mentioned previously, it seems that countries with a high GDP Per Capita sit at around a 25-35% Inequality of Outcomes. Additionally, it seems that country with lower GDP Per Capita's have a higher inequality percentage. This is indicated by the trend line that is displayed in the above graphic.
 <!-- ------------------------------------------------------------------ -->
 #### Research Question 3
 Is there a correlation between living standards (HPI) and GDP per capita?
 
 ##### Introduction
 
-In most cases wealthier countries are able provide a better standard of living for their citizens. For example, in the U.S. inequality tends to be high between different economic classes, however this tends to negligible in many cases because the living standard for almost any American is higher than that of of a third world country. In some cases the living standard for the poorest segment of Americans could be better than that of the upper class of other poorer nations. For a continent like Africa, where most of the countries are third world, we expected to see better standards of living for countries who have a higher GDP per capita because of the greater wealth circulating.
+In most cases wealthier countries are able provide a better standard of living for their citizens. For example, in the U.S. inequality of outcomes tends to be high between different economic classes, however this tends to negligible in many cases because the living standard for almost any American is higher than that of of a third world country. In some cases the living standard for the poorest segment of Americans could be better than that of the upper class of other poorer nations. For a continent like Africa, where most of the countries are third world, we expected to see better standards of living for countries who have a higher GDP per capita because of the greater wealth circulating.
 
 ##### Queries
 
@@ -324,3 +338,5 @@ Above it shows that while both countries have heavily invested into using resour
 ![Resource Rent % of GDP vs GDP Per Capita](graphics/Resource_GDP.png)
 <!-- ------------------------------------------------------------------ -->
 #### Concluding Remarks
+
+Throughout this project we have explored various regions in Africa and the data on their economies to understand why Africa is lagging behind other nations in terms of economic output and growth. From our research we have concluded there are a number of wide ranging factors that have slowed down the most of continent. These factors include, war,
