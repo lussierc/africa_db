@@ -1,7 +1,6 @@
 # africa_db README
-### Team Members: Christian Lussier, Robert Samuel, Jordan Wilson
 
-## Project Overview:
+## Project Overview
 Our project looks into a variety of questions surrounding African development and economics using database systems, such as why Africa's Real GDP growth rate suddenly declined after years of steady growth and if there is a correlation between region of residence and citizen happiness. Our research has provided a number of insights into these questions, finding for instance, that African citizens of countries in the MENA region seem to be much happier than those in Sub-Saharan Africa.
 
 To do this, our team compiled a plethora of data and used Sqlite3 to organize it and store it. Additionally, the project features a text-based interface developed in Python that can interact with the database.
