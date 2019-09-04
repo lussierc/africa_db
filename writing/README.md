@@ -1,3 +1,9 @@
-CS312 Project
+# `writing` README
 
-This directory is where you are to place all required written materials for the project such as your report, questions, and the justification of your queries as solutions to your questions that you used the data to answer. For details, please the class activity handout.
+This folder contains all of the writing for the project and its related files.
+
+-  `report.md`: The final report for the project, discussing the techniques and ideas surrounding the project. It also gives an overview of the results of the project.
+
+- `statusUpdate.md`: An update about project progress from when the project was not yet completed.
+
+- `graphics` folder: Contains images used in the project's writing documents.
